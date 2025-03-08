@@ -9,8 +9,11 @@ import Harvesting_Man from "@/assets/background/Harvesting_Man.png";
 import Harvesting_section2 from "@/assets/background/Harvesting_section2.png";
 import Orange_1 from "@/assets/background/Orange_1.png";
 import { Intro } from "@/features/home-page/components/intro";
+import { Product } from "@/features/home-page/components/product";
 import { Achieve } from "@/features/home-page/components/achieve";
 import { JoinUs } from "@/features/home-page/components/Join-us";
+import { Feedback } from "@/features/home-page/components/feedback";
+import { ListAchieve } from "@/features/home-page/components/list-achieve";
 
 export const HomePage = () => {
   const navigate = useNavigate();
@@ -31,7 +34,7 @@ export const HomePage = () => {
     <Box display="flex" flexDirection="column">
       <Box
         width="100vw"
-        height="710px"
+        height={{ xs: "600px", sm: "710px", md: "710px" }}
         display="flex"
         justifyContent="center"
         alignItems="center"
@@ -110,10 +113,10 @@ export const HomePage = () => {
               variant="contained"
               sx={{
                 mt: 3,
-                width: "200px",
+                width: { xs: "180px", sm: "200px", md: "200px" },
                 fontSize: "1rem",
                 padding: "10px 20px",
-                borderRadius: "60px",
+                borderRadius: 16,
               }}
               onClick={() => navigate("/about")}
             >
@@ -127,9 +130,18 @@ export const HomePage = () => {
       <Intro></Intro>
 
       {/* Section 3*/}
+      <Product></Product>
+
+      {/* Section 4*/}
       <Achieve></Achieve>
 
-      {/* Section 3*/}
+      {/* Section 5*/}
+      <ListAchieve></ListAchieve>
+
+      {/* Section 6*/}
+      <Feedback></Feedback>
+
+      {/* Section 7*/}
       <JoinUs></JoinUs>
     </Box>
   );

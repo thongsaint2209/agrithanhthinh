@@ -43,7 +43,10 @@ export const JoinUs = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
           >
-            <Typography fontSize="2rem" fontWeight="bold">
+            <Typography
+              fontSize={{ xs: "1.8rem", sm: "2rem", md: "2rem" }}
+              fontWeight="bold"
+            >
               Tham gia với chúng tôi
             </Typography>
           </motion.div>
@@ -52,7 +55,13 @@ export const JoinUs = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
           >
-            <Typography fontSize="1.4rem" mt={2} fontWeight="semibold">
+            <Typography
+              fontSize={{ xs: "1rem", sm: "1.4rem", md: "1.4rem" }}
+              mt={2}
+              pr={{ xs: 2 }}
+              pl={{ xs: 2 }}
+              fontWeight="semibold"
+            >
               Mỗi trái cam đều tươi ngon, mọng nước và giữ nguyên hương vị tự
               nhiên.
             </Typography>
@@ -62,7 +71,12 @@ export const JoinUs = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
           >
-            <Typography fontSize="1.4rem" fontWeight="semibold">
+            <Typography
+              fontSize={{ xs: "1rem", sm: "1.4rem", md: "1.4rem" }}
+              fontWeight="semibold"
+              pr={{ xs: 2 }}
+              pl={{ xs: 2 }}
+            >
               Dịch vụ giao hàng nhanh chóng, đóng gói cẩn thận .
             </Typography>
           </motion.div>
@@ -75,7 +89,7 @@ export const JoinUs = () => {
               variant="contained"
               sx={{
                 mt: 3,
-                width: "200px",
+                width: { xs: "180px", sm: "200px", md: "200px" },
                 fontSize: "1rem",
                 padding: "10px 20px",
                 borderRadius: "60px",

@@ -15,29 +15,16 @@ export const Intro = () => {
       <Box
         display="flex"
         flexDirection={{ xs: "column", sm: "row", md: "row" }}
-        height={{ xs: "auto", sm: "940px", md: "940px" }} // PC: 940px, Mobile: auto
+        height={{ xs: "auto", sm: "900px", md: "900px" }} // PC: 940px, Mobile: auto
         bgcolor="black"
         overflow="hidden"
         p={4}
         gap={4}
         flexWrap="wrap" // Mobile tránh tràn nội dung
       >
-        {/* Ảnh bên trái */}
-        <Box
-          flex={{ xs: "none", sm: 1.6, md: 2.3 }}
-          component="img"
-          src={Harvesting_section2}
-          alt="Vườn cam"
-          sx={{
-            height: { xs: "auto", sm: "100%", md: "100%" }, // Mobile: ảnh lớn hơn
-            objectFit: "cover",
-            borderRadius: 20,
-          }}
-        />
-
         {/* Nội dung bên phải */}
         <Box
-          flex={{ xs: "none", sm: 1.6, md: 1.6 }}
+          flex={{ xs: "none", sm: 1.4, md: 1.6 }}
           height={{ xs: "auto", sm: "100%", md: "100%" }}
           bgcolor="#16412B"
           color="white"
@@ -45,7 +32,7 @@ export const Intro = () => {
           display="flex"
           flexDirection="column"
           justifyContent="flex-start"
-          borderRadius={20}
+          borderRadius={{ xs: 12, sm: 16, md: 16 }}
           gap={8}
           position="relative"
           overflow="hidden"
@@ -54,8 +41,8 @@ export const Intro = () => {
           <Box
             sx={{
               position: "absolute",
-              width: { xs: "380px", sm: "360px", md: "440px" },
-              height: { xs: "380px", sm: "360px", md: "440px" },
+              width: { xs: "360px", sm: "360px", md: "420px" },
+              height: { xs: "360px", sm: "360px", md: "420px" },
               bgcolor: "#254A36",
               borderRadius: "50%",
               top: "-150px",
@@ -68,8 +55,8 @@ export const Intro = () => {
           <Box
             sx={{
               position: "absolute",
-              width: { xs: "380px", sm: "360px", md: "440px" },
-              height: { xs: "380px", sm: "360px", md: "440px" },
+              width: { xs: "360px", sm: "360px", md: "420px" },
+              height: { xs: "360px", sm: "360px", md: "420px" },
               bgcolor: "#254A36",
               borderRadius: "50%",
               bottom: "-150px",
@@ -85,8 +72,8 @@ export const Intro = () => {
             alt="Cam"
             sx={{
               position: "absolute",
-              width: { xs: "300px", sm: "300px", md: "400px" },
-              height: { xs: "300px", sm: "300px", md: "400px" },
+              width: { xs: "280px", sm: "300px", md: "380px" },
+              height: { xs: "280px", sm: "300px", md: "380px" },
               objectFit: "cover",
               transform: "rotate(40deg)",
               bottom: "-80px",
@@ -126,11 +113,10 @@ export const Intro = () => {
               variant="contained"
               sx={{
                 mt: 3,
-                width: "200px",
+                width: { xs: "180px", sm: "200px", md: "200px" },
                 fontSize: "1rem",
                 padding: "10px 20px",
-                borderRadius: "60px",
-                zIndex: "1",
+                borderRadius: 16,
               }}
               onClick={() => navigate("/about")}
             >
@@ -138,6 +124,18 @@ export const Intro = () => {
             </Button>
           </motion.div>
         </Box>
+        {/* Ảnh bên trái */}
+        <Box
+          flex={{ xs: "none", sm: 1.8, md: 2.6 }}
+          component="img"
+          src={Harvesting_section2}
+          alt="Vườn cam"
+          sx={{
+            height: { xs: "780px", sm: "100%", md: "100%" }, // Mobile: ảnh lớn hơn
+            objectFit: "cover",
+            borderRadius: { xs: 12, sm: 16, md: 16 },
+          }}
+        />
       </Box>
     </Box>
   );

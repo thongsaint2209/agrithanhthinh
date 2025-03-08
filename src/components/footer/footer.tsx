@@ -5,6 +5,7 @@ import Face from "@/assets/background/Facebook.svg";
 import Tele from "@/assets/background/Telegram.svg";
 import Zalo from "@/assets/background/Zalo.svg";
 import Insta from "@/assets/background/Instagram.svg";
+import Logo from "@/assets/logo/thanh-thinh-agri.svg";
 
 export const Footer = () => {
   return (
@@ -30,11 +31,42 @@ export const Footer = () => {
           justifyContent="space-between"
           flexDirection="row"
         >
-          <Typography variant="h5" fontWeight="bold" color="green">
-            Logo
-          </Typography>
+          <Box
+            display="flex"
+            alignItems="center"
+            justifyContent="space-between"
+            flexDirection="row"
+            gap={2}
+          >
+            <Box
+              width={{ xs: "54px", sm: "70px", md: "70px" }}
+              height={{ xs: "54px", sm: "70px", md: "70px" }}
+              component="img"
+              src={Logo}
+            />
+            <Box
+              pt={0}
+              display="flex"
+              alignItems="flex-start"
+              flexDirection="column"
+            >
+              <Typography
+                fontSize={{ xs: "1.2rem", sm: "1.6rem", md: "1.6rem" }}
+                fontWeight="bold"
+                color="green"
+              >
+                Thuong Thinh Agri
+              </Typography>
+              <Typography
+                fontSize={{ xs: "1rem", sm: "1.2rem", md: "1.2rem" }}
+                color="green"
+              >
+                Vị Ngon Từ Đất Việt
+              </Typography>
+            </Box>
+          </Box>
 
-          <Box display="flex" alignItems="center" gap="50px">
+          <Box display="flex" alignItems="center" gap={{ xs: 4, sm: 8, md: 8 }}>
             <Box width="24px" height="24px" component="img" src={Tele} />
             <Box width="24px" height="24px" component="img" src={Face} />
             <Box width="24px" height="24px" component="img" src={Zalo} />
@@ -46,7 +78,13 @@ export const Footer = () => {
       <Box height="2px" width="100%" bgcolor="black" />
 
       {/* Danh mục thông tin */}
-      <Box display="flex" flexWrap="wrap" justifyContent="space-between">
+      <Box
+        display="flex"
+        flexWrap="wrap"
+        alignItems="flex-start"
+        justifyContent="space-between"
+        gap={4}
+      >
         {/* Giới thiệu */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -60,12 +98,22 @@ export const Footer = () => {
             flexDirection="column"
             gap={3}
           >
-            <Typography fontSize="1.4rem" fontWeight="bold" color="green">
+            <Typography
+              fontSize={{ xs: "1.2rem", sm: "1.4rem", md: "1.4rem" }}
+              fontWeight="bold"
+              color="green"
+            >
               Giới thiệu
             </Typography>
-            <Typography fontSize="1rem">Sứ mệnh & tầm nhìn</Typography>
-            <Typography fontSize="1rem">Quá trình hình thành</Typography>
-            <Typography fontSize="1rem">Tiêu chuẩn & chứng nhận</Typography>
+            <Typography fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}>
+              Sứ mệnh & tầm nhìn
+            </Typography>
+            <Typography fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}>
+              Quá trình hình thành
+            </Typography>
+            <Typography fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}>
+              Tiêu chuẩn & chứng nhận
+            </Typography>
           </Box>
         </motion.div>
 
@@ -82,11 +130,19 @@ export const Footer = () => {
             flexDirection="column"
             gap={3}
           >
-            <Typography fontSize="1.4rem" fontWeight="bold" color="green">
+            <Typography
+              fontSize={{ xs: "1.2rem", sm: "1.4rem", md: "1.4rem" }}
+              fontWeight="bold"
+              color="green"
+            >
               Sản phẩm
             </Typography>
-            <Typography fontSize="1rem">Trái cây chủ lực</Typography>
-            <Typography fontSize="1rem">Đặt hàng</Typography>
+            <Typography fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}>
+              Trái cây chủ lực
+            </Typography>
+            <Typography fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}>
+              Đặt hàng
+            </Typography>
           </Box>
         </motion.div>
 
@@ -103,12 +159,22 @@ export const Footer = () => {
             flexDirection="column"
             gap={3}
           >
-            <Typography fontSize="1.4rem" fontWeight="bold" color="green">
+            <Typography
+              fontSize={{ xs: "1.2rem", sm: "1.4rem", md: "1.4rem" }}
+              fontWeight="bold"
+              color="green"
+            >
               Quy trình
             </Typography>
-            <Typography fontSize="1rem">Mô tả</Typography>
-            <Typography fontSize="1rem">Truy xuất nguồn gốc</Typography>
-            <Typography fontSize="1rem">Ứng dụng công nghệ</Typography>
+            <Typography fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}>
+              Mô tả
+            </Typography>
+            <Typography fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}>
+              Truy xuất nguồn gốc
+            </Typography>
+            <Typography fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}>
+              Ứng dụng công nghệ
+            </Typography>
           </Box>
         </motion.div>
 
@@ -125,11 +191,19 @@ export const Footer = () => {
             flexDirection="column"
             gap={3}
           >
-            <Typography fontSize="1.4rem" fontWeight="bold" color="green">
+            <Typography
+              fontSize={{ xs: "1.2rem", sm: "1.4rem", md: "1.4rem" }}
+              fontWeight="bold"
+              color="green"
+            >
               Đối tác & khách hàng
             </Typography>
-            <Typography fontSize="1rem">Thông tin đối tác</Typography>
-            <Typography fontSize="1rem">Đánh giá</Typography>
+            <Typography fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}>
+              Thông tin đối tác
+            </Typography>
+            <Typography fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}>
+              Đánh giá
+            </Typography>
           </Box>
         </motion.div>
 
@@ -146,11 +220,19 @@ export const Footer = () => {
             flexDirection="column"
             gap={3}
           >
-            <Typography fontSize="1.4rem" fontWeight="bold" color="green">
+            <Typography
+              fontSize={{ xs: "1.2rem", sm: "1.4rem", md: "1.4rem" }}
+              fontWeight="bold"
+              color="green"
+            >
               Liên hệ
             </Typography>
-            <Typography fontSize="1rem">Email: info@ghub.com</Typography>
-            <Typography fontSize="1rem">Sđt: 0908 900 484</Typography>
+            <Typography fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}>
+              Email: info@ghub.com
+            </Typography>
+            <Typography fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}>
+              Sđt: 0908 900 484
+            </Typography>
           </Box>
         </motion.div>
       </Box>
@@ -164,7 +246,7 @@ export const Footer = () => {
         transition={{ duration: 1.2 }}
       >
         <Typography
-          fontSize="1.4rem"
+          fontSize={{ xs: "1.2rem", sm: "1.4rem", md: "1.4rem" }}
           textAlign="center"
           mt={2}
           fontWeight="bold"
