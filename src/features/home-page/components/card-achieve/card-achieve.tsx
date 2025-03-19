@@ -5,12 +5,23 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import Harvesting_section2 from "@/assets/background/Harvesting_section2.png";
 import Orange_1 from "@/assets/background/Orange_1.png";
+import { useInView } from "react-intersection-observer"; //
 
 export const CardAchieve = (pros: any) => {
   const navigate = useNavigate();
+  const getThreshold = () => {
+    if (window.innerWidth < 600) return 0.1; // Mobile
+    if (window.innerWidth < 960) return 0.2; // Tablet
+    return 0.4; // Desktop
+  };
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: getThreshold(),
+  });
 
   return (
-    <Box>
+    <Box ref={ref}>
       {/* Section 2 */}
 
       <Box
@@ -23,10 +34,21 @@ export const CardAchieve = (pros: any) => {
         flexDirection="column"
         justifyContent="center"
         borderRadius={{ xs: 12, sm: 16, md: 16 }}
-        sx={{ overflow: "hidden" }} // Tránh nội dung tràn ra ngoài
-        component={motion.div} // Biến Box thành motion.div để bắt hover
-        whileHover="hover" // Khi hover kích hoạt animation
+        sx={{ overflow: "hidden" }}
+        component={motion.div} // Chỉ khai báo motion.div một lần duy nhất
+        variants={{
+          initial: { opacity: 0, scale: 0 }, // Animation ban đầu
+          visible: { opacity: 1, scale: 1 }, // Khi vào viewport
+          hover: { scale: 1 }, // Khi hover vào
+        }}
         initial="initial"
+        animate={inView ? "visible" : "initial"}
+        whileHover="hover"
+        transition={{
+          duration: 1.1,
+          delay: 0.5,
+          ease: [0.68, -0.4, 0.4, 1.6],
+        }}
       >
         {/* Tiêu đề có animation */}
         <motion.div
@@ -52,8 +74,14 @@ export const CardAchieve = (pros: any) => {
               width={{ xs: "44px", sm: "62px", md: "62px" }}
               height={{ xs: "44px", sm: "62px", md: "62px" }}
               borderRadius={{ xs: 4, sm: 4, md: 4 }}
-              bgcolor="#11472B"
-            />
+              bgcolor={pros.color}
+              display="flex"
+              flexDirection="row"
+              alignItems="center"
+              justifyContent="center"
+            >
+              {pros.icon}
+            </Box>
             <Typography
               fontSize={{ xs: "1.2rem", sm: "2.2rem", md: "2.2rem" }}
               fontWeight="bold"

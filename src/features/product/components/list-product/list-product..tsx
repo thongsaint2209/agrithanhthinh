@@ -38,7 +38,7 @@ const fruits = [
   },
 ];
 
-export const Product = () => {
+export const ListProduct = () => {
   const navigate = useNavigate();
   const [isExpanded, setIsExpanded] = useState(false);
   const [expandedId, setExpandedId] = useState<number | null>(null);
@@ -202,7 +202,7 @@ export const Product = () => {
                       padding: "10px 20px",
                       borderRadius: 16,
                     }}
-                    onClick={() => navigate("/about")}
+                    onClick={() => navigate(`/san-pham/${fruit.id}`)}
                   >
                     Tìm hiểu thêm
                   </Button>

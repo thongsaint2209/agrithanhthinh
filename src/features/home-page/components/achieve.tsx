@@ -6,28 +6,37 @@ import { motion } from "framer-motion";
 import Harvesting_section3 from "@/assets/background/Harvesting_section3.png";
 import Harvesting_section2 from "@/assets/background/Harvesting_section2.png";
 import Grapefruit from "@/assets/background/Grapefruit.png";
+import { useInView } from "react-intersection-observer"; //
 
 export const Achieve = () => {
   const navigate = useNavigate();
+  const getThreshold = () => {
+    if (window.innerWidth < 700) return 0.1; // Mobile
+    if (window.innerWidth < 960) return 0.2; // Tablet
+    return 0.6; // Desktop
+  };
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: getThreshold(),
+  });
 
   return (
-    <Box display="flex" flexDirection="column">
+    <Box ref={ref} display="flex" flexDirection="column">
       {/* Section 2 */}
       <Box
         display="flex"
         flexDirection={{ xs: "column", sm: "row", md: "row" }}
-        height={{ xs: "auto", sm: "900px", md: "900px" }} // PC: 940px, Mobile: auto
+        height={{ xs: "auto", sm: "800px", md: "800px" }} // PC: 940px, Mobile: auto
         bgcolor="black"
         overflow="hidden"
         p={4}
-        pt={2}
         gap={4}
         flexWrap="wrap" // Mobile tránh tràn nội dung
       >
         {/* Ảnh bên trái */}
         <Box
           flex={{ xs: "none", sm: 1.8, md: 2.6 }}
-          component="img"
           src={Harvesting_section3}
           alt="Vườn cam"
           sx={{
@@ -35,6 +44,14 @@ export const Achieve = () => {
             width: { xs: "100%", sm: "50%", md: "100%" },
             objectFit: "cover",
             borderRadius: { xs: 12, sm: 16, md: 16 },
+          }}
+          component={motion.img} // Thêm animation trực tiếp
+          initial={{ opacity: 0, x: -500, y: 0 }}
+          animate={inView ? { opacity: 1, x: 0, y: 0 } : {}}
+          transition={{
+            duration: 1.3,
+            delay: 0.5,
+            ease: [0.68, -0.4, 0.4, 1.4],
           }}
         />
 
@@ -49,7 +66,7 @@ export const Achieve = () => {
           flexDirection="column"
           justifyContent="flex-start"
           borderRadius={{ xs: 12, sm: 16, md: 16 }}
-          gap={8}
+          gap={4}
           position="relative"
           overflow="hidden"
         >
@@ -57,13 +74,21 @@ export const Achieve = () => {
           <Box
             sx={{
               position: "absolute",
-              width: { xs: "360px", sm: "360px", md: "420px" },
-              height: { xs: "360px", sm: "360px", md: "420px" },
+              width: { xs: "360px", sm: "360px", md: "400px" },
+              height: { xs: "360px", sm: "360px", md: "400px" },
               bgcolor: "#254A36",
               borderRadius: "50%",
               top: "-150px",
               right: "-180px",
               opacity: 0.7,
+            }}
+            component={motion.div} // Thêm animation trực tiếp
+            initial={{ opacity: 0, x: 200, y: -200 }}
+            animate={inView ? { opacity: 1, x: 0, y: 0 } : {}}
+            transition={{
+              duration: 1.3,
+              delay: 0.5,
+              ease: [0.68, -0.4, 0.4, 1.6],
             }}
           />
 
@@ -71,25 +96,40 @@ export const Achieve = () => {
           <Box
             sx={{
               position: "absolute",
-              width: { xs: "360px", sm: "360px", md: "420px" },
-              height: { xs: "360px", sm: "360px", md: "420px" },
+              width: { xs: "360px", sm: "360px", md: "400px" },
+              height: { xs: "360px", sm: "360px", md: "400px" },
               bgcolor: "#254A36",
               borderRadius: "50%",
               bottom: "-150px",
               left: "-180px",
               opacity: 0.7,
             }}
+            component={motion.div} // Thêm animation trực tiếp
+            initial={{ opacity: 0, x: -200, y: 200 }}
+            animate={inView ? { opacity: 1, x: 0, y: 0 } : {}}
+            transition={{
+              duration: 1.3,
+              delay: 0.5,
+              ease: [0.68, -0.4, 0.4, 1.6],
+            }}
           />
 
           {/* Hình cam */}
           <Box
-            component="img"
+            component={motion.img}
+            initial={{ opacity: 0, scale: 0.25 }} // Thêm giá trị rotate ban đầu
+            animate={inView ? { opacity: 1, scale: 1 } : {}}
+            transition={{
+              duration: 1.3,
+              delay: 0.5,
+              ease: [0.68, -0.4, 0.4, 1.4],
+            }}
             src={Grapefruit}
             alt="Cam"
             sx={{
               position: "absolute",
-              width: { xs: "320px", sm: "380px", md: "440px" },
-              height: { xs: "320px", sm: "380px", md: "440px" },
+              width: { xs: "320px", sm: "380px", md: "400px" },
+              height: { xs: "320px", sm: "380px", md: "400px" },
               objectFit: "cover",
               transform: "rotate(0deg)",
               bottom: "-70px",
@@ -100,10 +140,18 @@ export const Achieve = () => {
 
           {/* Nội dung */}
           <Typography
-            fontSize={{ xs: "2rem", sm: "2.2rem", md: "2.2rem" }}
+            fontSize={{ xs: "1.6rem", sm: "2rem", md: "2rem" }}
             fontWeight="bold"
             color="#D4E051"
             zIndex={1}
+            component={motion.div} // Thêm animation trực tiếp
+            initial={{ opacity: 0, x: 200 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{
+              duration: 1.3,
+              delay: 0.5,
+              ease: [0.68, -0.4, 0.4, 1.6],
+            }}
           >
             Thành tựu nổi bật của chúng tôi
           </Typography>
@@ -113,6 +161,14 @@ export const Achieve = () => {
             mt={2}
             zIndex={1}
             lineHeight={2}
+            component={motion.div} // Thêm animation trực tiếp
+            initial={{ opacity: 0, x: 200 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{
+              duration: 1.3,
+              delay: 0.5,
+              ease: [0.68, -0.4, 0.4, 1.6],
+            }}
           >
             Được trồng theo tiêu chuẩn nông nghiệp hữu cơ, không hóa chất độc
             hại, đảm bảo an toàn cho sức khỏe. Đạt độ chín hoàn hảo, mọng nước,
@@ -121,16 +177,20 @@ export const Achieve = () => {
 
           {/* Nút bấm */}
           <motion.div
-            initial={{ opacity: 0, y: 75 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
+            initial={{ opacity: 0, x: 200 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{
+              duration: 1.3,
+              delay: 0.5,
+              ease: [0.68, -0.4, 0.4, 1.6],
+            }}
           >
             <Button
               variant="contained"
               sx={{
                 mt: 3,
-                width: { xs: "180px", sm: "200px", md: "200px" },
-                fontSize: "1rem",
+                width: { xs: "170px", sm: "200px", md: "200px" },
+                fontSize: { xs: "0.9rem", sm: "1rem", md: "1rem" },
                 padding: "10px 20px",
                 borderRadius: 16,
               }}

@@ -5,17 +5,28 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import Harvesting_section2 from "@/assets/background/Harvesting_section2.png";
 import Orange_1 from "@/assets/background/Orange_1.png";
+import { useInView } from "react-intersection-observer"; //
 
 export const Feedback = () => {
   const navigate = useNavigate();
+  const getThreshold = () => {
+    if (window.innerWidth < 600) return 0.1; // Mobile
+    if (window.innerWidth < 960) return 0.2; // Tablet
+    return 0.4; // Desktop
+  };
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: getThreshold(),
+  });
 
   return (
-    <Box display="flex" flexDirection="column">
+    <Box ref={ref} display="flex" flexDirection="column">
       {/* Section 2 */}
       <Box
         display="flex"
         flexDirection={{ xs: "column", sm: "row", md: "row" }}
-        height={{ xs: "1960px", sm: "900px", md: "900px" }} // PC: 940px, Mobile: auto
+        height={{ xs: "2000px", sm: "900px", md: "900px" }} // PC: 940px, Mobile: auto
         bgcolor="black"
         overflow="hidden"
         p={4}
@@ -43,12 +54,20 @@ export const Feedback = () => {
             sx={{
               position: "absolute",
               width: { xs: "360px", sm: "900px", md: "1000px" },
-              height: { xs: "360px", sm: "980px", md: "1050px" },
+              height: { xs: "360px", sm: "980px", md: "1160px" },
               bgcolor: "#254A36",
               borderRadius: "100%",
-              top: "-80px",
+              top: "-100px",
               left: "-180px",
               opacity: 0.7,
+            }}
+            component={motion.div} // Thêm animation trực tiếp
+            initial={{ opacity: 0, x: -300, y: -400 }}
+            animate={inView ? { opacity: 1, x: 0, y: 0 } : {}}
+            transition={{
+              duration: 1.3,
+              delay: 0.5,
+              ease: [0.68, -0.4, 0.4, 1.6],
             }}
           />
 
@@ -64,15 +83,31 @@ export const Feedback = () => {
               right: "-180px",
               opacity: 0.7,
             }}
+            component={motion.div} // Thêm animation trực tiếp
+            initial={{ opacity: 0, x: 300, y: 400 }}
+            animate={inView ? { opacity: 1, x: 0, y: 0 } : {}}
+            transition={{
+              duration: 1.3,
+              delay: 0.5,
+              ease: [0.68, -0.4, 0.4, 1.6],
+            }}
           />
 
           {/* box 1 */}
           <Box
             sx={{
               position: "absolute",
-              top: { xs: "160px", sm: "100px", md: "100px" },
-              left: { xs: "30%", sm: "100px", md: "140px" },
+              top: { xs: "180px", sm: "100px", md: "100px" },
+              left: { xs: "20%", sm: "100px", md: "140px" },
               transform: "rotate(10deg)",
+            }}
+            component={motion.div} // Thêm animation trực tiếp
+            initial={{ opacity: 0, x: -200, y: -200, rotate: 10 }}
+            animate={inView ? { opacity: 1, x: 0, y: 0, rotate: 10 } : {}}
+            transition={{
+              duration: 1.3,
+              delay: 0.5,
+              ease: [0.68, -0.4, 0.4, 1.6],
             }}
           >
             {/* Box vàng có hiệu ứng scale */}
@@ -139,9 +174,17 @@ export const Feedback = () => {
           <Box
             sx={{
               position: "absolute",
-              top: { xs: "440px", sm: "40px", md: "40px" },
-              right: { xs: "30%", sm: "35%", md: "600px" },
+              top: { xs: "460px", sm: "40px", md: "40px" },
+              right: { xs: "20%", sm: "35%", md: "600px" },
               transform: "rotate(-5deg)",
+            }}
+            component={motion.div} // Thêm animation trực tiếp
+            initial={{ opacity: 0, y: -200, rotate: -5 }}
+            animate={inView ? { opacity: 1, x: 0, y: 0, rotate: -5 } : {}}
+            transition={{
+              duration: 1.3,
+              delay: 0.5,
+              ease: [0.68, -0.4, 0.4, 1.6],
             }}
           >
             {/* Box vàng có hiệu ứng scale */}
@@ -208,9 +251,17 @@ export const Feedback = () => {
           <Box
             sx={{
               position: "absolute",
-              top: { xs: "720px", sm: "80px", md: "80px" },
+              top: { xs: "750px", sm: "80px", md: "80px" },
               right: { xs: "20%", sm: "100px", md: "140px" },
               transform: "rotate(5deg)",
+            }}
+            component={motion.div} // Thêm animation trực tiếp
+            initial={{ opacity: 0, x: 200, y: -200, rotate: 5 }}
+            animate={inView ? { opacity: 1, x: 0, y: 0, rotate: 5 } : {}}
+            transition={{
+              duration: 1.3,
+              delay: 0.5,
+              ease: [0.68, -0.4, 0.4, 1.6],
             }}
           >
             {/* Box vàng có hiệu ứng scale */}
@@ -277,9 +328,17 @@ export const Feedback = () => {
           <Box
             sx={{
               position: "absolute",
-              top: { xs: "990px", sm: "480px", md: "480px" },
+              top: { xs: "1030px", sm: "480px", md: "480px" },
               left: { xs: "20%", sm: "120px", md: "160px" },
               transform: "rotate(-10deg)",
+            }}
+            component={motion.div} // Thêm animation trực tiếp
+            initial={{ opacity: 0, x: -200, y: 200, rotate: -10 }}
+            animate={inView ? { opacity: 1, x: 0, y: 0, rotate: -10 } : {}}
+            transition={{
+              duration: 1.3,
+              delay: 0.5,
+              ease: [0.68, -0.4, 0.4, 1.6],
             }}
           >
             {/* Box vàng có hiệu ứng scale */}
@@ -346,9 +405,17 @@ export const Feedback = () => {
           <Box
             sx={{
               position: "absolute",
-              top: { xs: "1280px", sm: "500px", md: "500px" },
+              top: { xs: "1320px", sm: "500px", md: "500px" },
               right: { xs: "20%", sm: "35%", md: "580px" },
               transform: "rotate(-0deg)",
+            }}
+            component={motion.div} // Thêm animation trực tiếp
+            initial={{ opacity: 0, y: 200, rotate: 0 }}
+            animate={inView ? { opacity: 1, x: 0, y: 0, rotate: 0 } : {}}
+            transition={{
+              duration: 1.3,
+              delay: 0.5,
+              ease: [0.68, -0.4, 0.4, 1.6],
             }}
           >
             {/* Box vàng có hiệu ứng scale */}
@@ -415,9 +482,17 @@ export const Feedback = () => {
           <Box
             sx={{
               position: "absolute",
-              top: { xs: "1560px", sm: "480px", md: "480px" },
-              right: { xs: "30%", sm: "100px", md: "140px" },
+              top: { xs: "1600px", sm: "480px", md: "480px" },
+              right: { xs: "20%", sm: "100px", md: "140px" },
               transform: "rotate(-15deg)",
+            }}
+            component={motion.div} // Thêm animation trực tiếp
+            initial={{ opacity: 0, x: 200, y: 200, rotate: -15 }}
+            animate={inView ? { opacity: 1, x: 0, y: 0, rotate: -15 } : {}}
+            transition={{
+              duration: 1.3,
+              delay: 0.5,
+              ease: [0.68, -0.4, 0.4, 1.6],
             }}
           >
             {/* Box vàng có hiệu ứng scale */}
@@ -485,6 +560,14 @@ export const Feedback = () => {
             fontWeight="bold"
             color="#D4E051"
             zIndex={1}
+            component={motion.div} // Thêm animation trực tiếp
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, x: 0, y: 0 } : {}}
+            transition={{
+              duration: 1.3,
+              delay: 0.5,
+              ease: [0.68, -0.4, 0.4, 1.6],
+            }}
           >
             Phản hồi từ khách hàng
           </Typography>
