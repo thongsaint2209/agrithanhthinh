@@ -68,7 +68,6 @@ export const Button = ({
         },
         ...sx,
       }}
-      component={component} // MUI button doesn't have this type
       disabled={isLoading ? true : disabled}
       onClick={onClick}
       disableFocusRipple
