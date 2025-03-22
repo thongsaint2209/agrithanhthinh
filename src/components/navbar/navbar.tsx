@@ -54,10 +54,7 @@ export const Navbar = () => {
         >
           <MenuRoundedIcon />
         </IconButton>
-        <Box
-          onClick={() => (window.location.href = "/trang-chu")}
-          sx={{ cursor: "pointer" }}
-        >
+        <Box onClick={() => navigate("/trang-chu")} sx={{ cursor: "pointer" }}>
           <Box display="flex" alignItems="center" gap={1}>
             <Box
               width={{ xs: "35px", sm: "45px", md: "45px" }}
