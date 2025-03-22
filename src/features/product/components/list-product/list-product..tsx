@@ -57,6 +57,11 @@ export const ListProduct = () => {
     threshold: getThreshold(),
   });
 
+  const handleClick = () => {
+    navigate("/lien-lac");
+    window.scrollTo(0, 0); // Reset về đầu trang
+  };
+
   return (
     <Box
       ref={ref}
@@ -223,7 +228,10 @@ export const ListProduct = () => {
                       padding: "10px 20px",
                       borderRadius: 16,
                     }}
-                    onClick={() => navigate(`/san-pham/${fruit.id}`)}
+                    onClick={() => {
+                      window.scrollTo(0, 0); // Reset về đầu trang
+                      navigate(`/san-pham/${fruit.id}`);
+                    }}
                   >
                     Tìm hiểu thêm
                   </Button>

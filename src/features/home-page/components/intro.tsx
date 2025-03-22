@@ -22,6 +22,11 @@ export const Intro = (pros: any) => {
     threshold: getThreshold(),
   });
 
+  const handleClick = () => {
+    navigate("/gioi-thieu");
+    window.scrollTo(0, 0); // Reset về đầu trang
+  };
+
   return (
     <Box ref={ref} display="flex" flexDirection="column">
       {/* Section 2 */}
@@ -174,7 +179,7 @@ export const Intro = (pros: any) => {
                 padding: "10px 20px",
                 borderRadius: 16,
               }}
-              onClick={() => navigate("/gioi-thieu")}
+              onClick={handleClick}
             >
               Tìm hiểu thêm
             </Button>

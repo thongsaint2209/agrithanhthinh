@@ -435,7 +435,10 @@ export const ProductDetail = (props: any) => {
                       padding: "10px 20px",
                       borderRadius: 16,
                     }}
-                    onClick={() => navigate("/lien-lac")}
+                    onClick={() => {
+                      window.scrollTo(0, 0); // Reset về đầu trang
+                      navigate("/lien-lac");
+                    }}
                   >
                     Liên hệ ngay
                   </Button>

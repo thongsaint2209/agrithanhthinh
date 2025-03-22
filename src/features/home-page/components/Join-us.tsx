@@ -29,6 +29,11 @@ export const JoinUs = () => {
     img.onload = () => setImageLoaded(true);
   }, []);
 
+  const handleClick = () => {
+    navigate("/lien-lac");
+    window.scrollTo(0, 0); // Reset về đầu trang
+  };
+
   return (
     <Box ref={ref} display="flex" flexDirection="column">
       <Box
@@ -142,7 +147,7 @@ export const JoinUs = () => {
                 padding: "10px 20px",
                 borderRadius: 16,
               }}
-              onClick={() => navigate("/lien-lac")}
+              onClick={handleClick}
             >
               Tìm hiểu thêm
             </Button>

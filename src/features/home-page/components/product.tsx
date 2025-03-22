@@ -57,6 +57,11 @@ export const Product = () => {
     threshold: getThreshold(),
   });
 
+  const handleClick = () => {
+    navigate("/san-pham");
+    window.scrollTo(0, 0); // Reset về đầu trang
+  };
+
   return (
     <Box
       ref={ref}
@@ -202,7 +207,7 @@ export const Product = () => {
                       padding: "10px 20px",
                       borderRadius: 16,
                     }}
-                    onClick={() => navigate("/san-pham")}
+                    onClick={handleClick}
                   >
                     Tìm hiểu thêm
                   </Button>
