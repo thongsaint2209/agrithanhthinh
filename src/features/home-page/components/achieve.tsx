@@ -194,7 +194,7 @@ export const Achieve = () => {
                 padding: "10px 20px",
                 borderRadius: 16,
               }}
-              onClick={() => navigate("/about")}
+              onClick={() => navigate("/gioi-thieu")}
             >
               Tìm hiểu thêm
             </Button>

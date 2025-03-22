@@ -202,7 +202,7 @@ export const Product = () => {
                       padding: "10px 20px",
                       borderRadius: 16,
                     }}
-                    onClick={() => navigate("/about")}
+                    onClick={() => navigate("/san-pham")}
                   >
                     Tìm hiểu thêm
                   </Button>

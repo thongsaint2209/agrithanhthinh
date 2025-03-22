@@ -142,7 +142,7 @@ export const JoinUs = () => {
                 padding: "10px 20px",
                 borderRadius: 16,
               }}
-              onClick={() => navigate("/about")}
+              onClick={() => navigate("/lien-lac")}
             >
               Tìm hiểu thêm
             </Button>
