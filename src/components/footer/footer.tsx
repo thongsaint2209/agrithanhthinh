@@ -337,10 +337,10 @@ export const Footer = () => {
               Liên hệ
             </Typography>
             <Typography fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}>
-              Email: info@ghub.com
+              Email: thanhthinh723317@gmail.com
             </Typography>
             <Typography fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}>
-              Sđt: 0908 900 484
+              Sđt: +84 357523669
             </Typography>
           </Box>
         </motion.div>

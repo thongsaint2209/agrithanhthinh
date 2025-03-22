@@ -66,6 +66,7 @@ export const ListProduct = () => {
       bgcolor="black"
       p={2}
       gap={4}
+      pb={8}
     >
       <Box justifyContent="center">
         <Typography
@@ -105,10 +106,15 @@ export const ListProduct = () => {
           return (
             <motion.div
               key={fruit.id}
-              animate={{ width: isExpanded ? 460 : 250 }}
-              transition={{ duration: 0.8, ease: [0.2, 0.2, 0.2, 1.1] }}
+              animate={{ width: isExpanded ? 300 : 300 }}
+              initial={{ filter: "brightness(1.4)" }}
+              transition={{
+                duration: 1.3,
+                delay: 0.5,
+                ease: [0.68, -0.4, 0.4, 1.6],
+              }}
               style={{
-                maxWidth: 500, // Giữ layout nhất quán
+                maxWidth: 300, // Giữ layout nhất quán
               }}
             >
               <Box
@@ -120,11 +126,22 @@ export const ListProduct = () => {
                 position="relative"
                 overflow="hidden"
                 p={4}
-                onClick={() => setExpandedId(isExpanded ? null : fruit.id)}
                 sx={{
                   cursor: "pointer",
                   background: "black",
                   width: "100%",
+                }}
+                component={motion.div}
+                whileHover={{
+                  scale: 1.05,
+                  filter: "brightness(0.75)",
+                }} // Thay đổi thuộc tính khi hover
+                onHoverStart={() => setExpandedId(fruit.id)} // Thiết lập trạng thái khi bắt đầu hover
+                onHoverEnd={() => setExpandedId(null)} // Thiết lập trạng thái khi kết thúc hover
+                transition={{
+                  duration: 0.4,
+
+                  ease: [0.68, -0.4, 0.4, 1.6],
                 }}
               >
                 {/* Ảnh nền */}
@@ -173,7 +190,11 @@ export const ListProduct = () => {
                     open: { height: "auto", opacity: 1 },
                     collapsed: { height: 0, opacity: 0 },
                   }}
-                  transition={{ duration: 0.4, ease: [0.33, 1, 0.68, 1] }}
+                  transition={{
+                    duration: 1,
+
+                    ease: [0.68, -0.4, 0.4, 1.3],
+                  }}
                   style={{
                     overflow: "hidden",
                     zIndex: 2,
@@ -182,13 +203,13 @@ export const ListProduct = () => {
                   }}
                 >
                   <Typography
-                    fontSize={{ xs: "1.5rem", sm: "2.6rem", md: "2.8rem" }}
+                    fontSize={{ xs: "1.5rem", sm: "2.4rem", md: "2.4rem" }}
                     fontWeight="bold"
                   >
                     {fruit.name}
                   </Typography>
                   <Typography
-                    fontSize={{ xs: "0.9rem", sm: "1.1rem", md: "1.1rem" }}
+                    fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}
                     mt={1}
                   >
                     {fruit.des}

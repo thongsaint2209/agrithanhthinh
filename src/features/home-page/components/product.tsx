@@ -170,7 +170,7 @@ export const Product = () => {
                   initial={false}
                   animate={isExpanded ? "open" : "collapsed"}
                   variants={{
-                    open: { height: "auto", opacity: 1 },
+                    open: { height: "300px", opacity: 1 },
                     collapsed: { height: 0, opacity: 0 },
                   }}
                   transition={{ duration: 0.4, ease: [0.33, 1, 0.68, 1] }}

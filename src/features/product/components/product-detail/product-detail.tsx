@@ -287,6 +287,9 @@ export const ProductDetail = (props: any) => {
                               ? "3px solid white"
                               : "3px solid transparent",
                           transition: "border 0.3s",
+                          "&:focus": {
+                            border: "2px solid white !important",
+                          },
                           "&:hover": {
                             border: "2px solid white !important",
                           },
