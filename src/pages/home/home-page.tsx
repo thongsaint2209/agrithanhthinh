@@ -11,9 +11,12 @@ import { JoinUs } from "@/features/home-page/components/Join-us";
 import { Feedback } from "@/features/home-page/components/feedback";
 import { ListAchieve } from "@/features/home-page/components/list-achieve";
 import { Slider } from "@/features/home-page/components/slider";
+import { ListProduct } from "@/features/product/components/list-product/list-product.";
+import { useMediaQuery } from "@mui/material";
 
 export const HomePage = () => {
   const navigate = useNavigate();
+  const isMobile = useMediaQuery("(max-width:1000px)");
 
   return (
     <Box display="flex" flexDirection="column" width="100%">
@@ -24,7 +27,7 @@ export const HomePage = () => {
 
       <Intro />
 
-      <Product />
+      <Box>{isMobile ? <ListProduct /> : <Product />}</Box>
 
       <Achieve />
 

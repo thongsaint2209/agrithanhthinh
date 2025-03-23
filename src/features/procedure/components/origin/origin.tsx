@@ -32,7 +32,7 @@ export const Origin = (pros: any) => {
         height={{ xs: "auto", sm: "800px", md: "800px" }} // PC: 940px, Mobile: auto
         bgcolor="black"
         overflow="hidden"
-        px={4}
+        px={{ xs: 2, sm: 4, md: 4 }}
         gap={4}
         pb={4}
         flexWrap="wrap" // Mobile tránh tràn nội dung
@@ -40,10 +40,11 @@ export const Origin = (pros: any) => {
         {/* Nội dung bên phải */}
         <Box
           flex={{ xs: "none", sm: 1.4, md: 1.6 }}
-          height={{ xs: "auto", sm: "100%", md: "100%" }}
+          height={{ xs: "560px", sm: "100%", md: "100%" }}
           bgcolor="#16412B"
           color="white"
           p={8}
+          px={{ xs: 4, sm: 8, md: 8 }}
           display="flex"
           flexDirection="column"
           justifyContent="flex-start"
@@ -122,7 +123,7 @@ export const Origin = (pros: any) => {
 
           {/* Nút bấm */}
           <Typography
-            fontSize={{ xs: "1.6rem", sm: "2.2rem", md: "2.4rem" }}
+            fontSize={{ xs: "1.4rem", sm: "2.2rem", md: "2.4rem" }}
             fontWeight="bold"
             color="#D4E051"
             zIndex={1}
@@ -139,7 +140,7 @@ export const Origin = (pros: any) => {
           </Typography>
 
           <Typography
-            fontSize={{ xs: "0.9rem", sm: "1.2rem", md: "1.2rem" }}
+            fontSize={{ xs: "0.8rem", sm: "1.2rem", md: "1.2rem" }}
             mt={{ xs: 0, sm: 2, md: 2 }}
             zIndex={1}
             lineHeight={2}
@@ -161,10 +162,11 @@ export const Origin = (pros: any) => {
 
         <Box
           flex={{ xs: "none", sm: 1.4, md: 1.6 }}
-          height={{ xs: "auto", sm: "100%", md: "100%" }}
+          height={{ xs: "560px", sm: "100%", md: "100%" }}
           bgcolor="#16412B"
           color="white"
           p={8}
+          px={{ xs: 4, sm: 8, md: 8 }}
           display="flex"
           flexDirection="column"
           justifyContent="flex-start"
@@ -244,7 +246,7 @@ export const Origin = (pros: any) => {
 
           {/* Nút bấm */}
           <Typography
-            fontSize={{ xs: "1.6rem", sm: "2.2rem", md: "2.4rem" }}
+            fontSize={{ xs: "1.4rem", sm: "2.2rem", md: "2.4rem" }}
             fontWeight="bold"
             color="#D4E051"
             zIndex={1}
@@ -261,7 +263,7 @@ export const Origin = (pros: any) => {
           </Typography>
 
           <Typography
-            fontSize={{ xs: "0.9rem", sm: "1.2rem", md: "1.2rem" }}
+            fontSize={{ xs: "0.8rem", sm: "1.2rem", md: "1.2rem" }}
             mt={{ xs: 0, sm: 2, md: 2 }}
             zIndex={1}
             lineHeight={2}

@@ -216,7 +216,7 @@ export const ContactUs = () => {
               <Typography
                 textAlign="center"
                 alignSelf="center"
-                fontSize={{ xs: "1.6rem", sm: "2rem", md: "2.4rem" }}
+                fontSize={{ xs: "1.4rem", sm: "2rem", md: "2.4rem" }}
                 fontWeight="bold"
                 color="#D4E051"
                 zIndex={1}
@@ -237,9 +237,9 @@ export const ContactUs = () => {
                 display="flex"
                 flexDirection="column"
                 gap={2}
-                width={{ xs: "340px", sm: "400px", md: "400px" }}
-                p={4}
-                py={3}
+                width={{ xs: "280px", sm: "400px", md: "400px" }}
+                p={{ xs: 2, sm: 4, md: 4 }}
+                py={2}
                 bgcolor="#fff"
                 borderRadius={{ xs: 8, sm: 8, md: 8 }}
               >
@@ -260,7 +260,7 @@ export const ContactUs = () => {
                   <Typography
                     textAlign="center"
                     alignSelf="flex-start"
-                    fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}
+                    fontSize={{ xs: "0.8rem", sm: "1rem", md: "1rem" }}
                     fontWeight="bold"
                     color="#16412B"
                     zIndex={1}
@@ -277,14 +277,14 @@ export const ContactUs = () => {
                     sx={{
                       "& .MuiInputBase-input": {
                         fontSize: {
-                          xs: 10, // Kích thước chữ cho màn hình nhỏ
+                          xs: 8, // Kích thước chữ cho màn hình nhỏ
                           sm: 12, // Kích thước chữ cho màn hình trung bình
                           md: 14, // Kích thước chữ cho màn hình lớn
                         },
                       },
                       "& .MuiInputLabel-root": {
                         fontSize: {
-                          xs: 12,
+                          xs: 10,
                           sm: 12,
                           md: 14,
                         },
@@ -320,7 +320,7 @@ export const ContactUs = () => {
                   <Typography
                     textAlign="center"
                     alignSelf="flex-start"
-                    fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}
+                    fontSize={{ xs: "0.8rem", sm: "1rem", md: "1rem" }}
                     fontWeight="bold"
                     color="#16412B"
                     zIndex={1}
@@ -337,14 +337,14 @@ export const ContactUs = () => {
                     sx={{
                       "& .MuiInputBase-input": {
                         fontSize: {
-                          xs: 10, // Kích thước chữ cho màn hình nhỏ
+                          xs: 8, // Kích thước chữ cho màn hình nhỏ
                           sm: 12, // Kích thước chữ cho màn hình trung bình
                           md: 14, // Kích thước chữ cho màn hình lớn
                         },
                       },
                       "& .MuiInputLabel-root": {
                         fontSize: {
-                          xs: 12,
+                          xs: 10,
                           sm: 12,
                           md: 14,
                         },
@@ -379,7 +379,7 @@ export const ContactUs = () => {
                   <Typography
                     textAlign="center"
                     alignSelf="flex-start"
-                    fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}
+                    fontSize={{ xs: "0.8rem", sm: "1rem", md: "1rem" }}
                     fontWeight="bold"
                     color="#16412B"
                     zIndex={1}
@@ -396,14 +396,14 @@ export const ContactUs = () => {
                     sx={{
                       "& .MuiInputBase-input": {
                         fontSize: {
-                          xs: 10, // Kích thước chữ cho màn hình nhỏ
+                          xs: 8, // Kích thước chữ cho màn hình nhỏ
                           sm: 12, // Kích thước chữ cho màn hình trung bình
                           md: 14, // Kích thước chữ cho màn hình lớn
                         },
                       },
                       "& .MuiInputLabel-root": {
                         fontSize: {
-                          xs: 12,
+                          xs: 10,
                           sm: 12,
                           md: 14,
                         },
@@ -439,7 +439,7 @@ export const ContactUs = () => {
                   <Typography
                     textAlign="center"
                     alignSelf="flex-start"
-                    fontSize={{ xs: "1rem", sm: "1rem", md: "1rem" }}
+                    fontSize={{ xs: "0.8rem", sm: "1rem", md: "1rem" }}
                     fontWeight="bold"
                     color="#16412B"
                     zIndex={1}
@@ -454,21 +454,21 @@ export const ContactUs = () => {
                     variant="outlined"
                     required
                     multiline
-                    minRows={4} // Adjust the number of rows to set the height
+                    minRows={3} // Adjust the number of rows to set the height
                     inputProps={{
                       maxLength: 158, // Limits input to 100 characters
                     }}
                     sx={{
                       "& .MuiInputBase-input": {
                         fontSize: {
-                          xs: 10, // Kích thước chữ cho màn hình nhỏ
+                          xs: 8, // Kích thước chữ cho màn hình nhỏ
                           sm: 12, // Kích thước chữ cho màn hình trung bình
                           md: 14, // Kích thước chữ cho màn hình lớn
                         },
                       },
                       "& .MuiInputLabel-root": {
                         fontSize: {
-                          xs: 12,
+                          xs: 10,
                           sm: 12,
                           md: 14,
                         },
@@ -503,6 +503,7 @@ export const ContactUs = () => {
                     variant="contained"
                     sx={{
                       width: { xs: "100%", sm: "100%", md: "100%" },
+                      height: { xs: "50px", sm: "60px", md: "60px" },
                       fontSize: { xs: "0.9rem", sm: "1rem", md: "1rem" },
                       padding: "10px 20px",
                       borderRadius: 4,
@@ -537,8 +538,8 @@ export const ContactUs = () => {
                 }}
               >
                 <Box
-                  width={{ xs: "34px", sm: "42px", md: "42px" }}
-                  height={{ xs: "34px", sm: "42px", md: "42px" }}
+                  width={{ xs: "32px", sm: "42px", md: "42px" }}
+                  height={{ xs: "32px", sm: "42px", md: "42px" }}
                   borderRadius={{ xs: 16, sm: 16, md: 16 }}
                   bgcolor="#ffff"
                   display="flex"
@@ -555,7 +556,7 @@ export const ContactUs = () => {
                 </Box>
                 {/* Contact */}
                 <Typography
-                  fontSize={{ xs: "1rem", sm: "1.1rem", md: "1.1rem" }}
+                  fontSize={{ xs: "0.9rem", sm: "1.1rem", md: "1.1rem" }}
                   color="#ffff"
                 >
                   +84 357523669
@@ -578,8 +579,8 @@ export const ContactUs = () => {
                 }}
               >
                 <Box
-                  width={{ xs: "34px", sm: "42px", md: "42px" }}
-                  height={{ xs: "34px", sm: "42px", md: "42px" }}
+                  width={{ xs: "32px", sm: "42px", md: "42px" }}
+                  height={{ xs: "32px", sm: "42px", md: "42px" }}
                   borderRadius={{ xs: 16, sm: 16, md: 16 }}
                   bgcolor="#ffff"
                   display="flex"
@@ -596,7 +597,7 @@ export const ContactUs = () => {
                 </Box>
                 {/* Contact */}
                 <Typography
-                  fontSize={{ xs: "1rem", sm: "1.1rem", md: "1.1rem" }}
+                  fontSize={{ xs: "0.9rem", sm: "1.1rem", md: "1.1rem" }}
                   color="#ffff"
                 >
                   thanhthinh723317@gmail.com
@@ -619,8 +620,8 @@ export const ContactUs = () => {
                 }}
               >
                 <Box
-                  width={{ xs: "34px", sm: "42px", md: "42px" }}
-                  height={{ xs: "34px", sm: "42px", md: "42px" }}
+                  width={{ xs: "32px", sm: "42px", md: "42px" }}
+                  height={{ xs: "32px", sm: "42px", md: "42px" }}
                   borderRadius={{ xs: 16, sm: 16, md: 16 }}
                   bgcolor="#ffff"
                   display="flex"
@@ -636,7 +637,7 @@ export const ContactUs = () => {
                   />
                 </Box>
                 <Typography
-                  fontSize={{ xs: "1rem", sm: "1.1rem", md: "1.1rem" }}
+                  fontSize={{ xs: "0.82rem", sm: "1.1rem", md: "1.1rem" }}
                   color="#ffff"
                 >
                   Ấp Chánh Hưng, Xã Hiếu Liêm, Huyện

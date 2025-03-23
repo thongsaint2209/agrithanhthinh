@@ -44,7 +44,6 @@ export const ListProduct = () => {
   const [expandedId, setExpandedId] = useState<number | null>(null);
 
   const getThreshold = () => {
-    console.log(innerWidth);
     if (window.innerWidth < 600) return 0.1; // Mobile
     if (window.innerWidth < 1000) return 0.1; // Tablet
     if (window.innerWidth < 1400) return 0.3; // Tablet

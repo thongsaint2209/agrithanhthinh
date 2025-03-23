@@ -207,7 +207,10 @@ export const Product = () => {
                       padding: "10px 20px",
                       borderRadius: 16,
                     }}
-                    onClick={handleClick}
+                    onClick={() => {
+                      window.scrollTo(0, 0); // Reset về đầu trang
+                      navigate(`/san-pham/${fruit.id}`);
+                    }}
                   >
                     Tìm hiểu thêm
                   </Button>

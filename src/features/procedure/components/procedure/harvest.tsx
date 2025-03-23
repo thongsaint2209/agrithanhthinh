@@ -33,18 +33,18 @@ export const Harvest = (pros: any) => {
         overflow="hidden"
         justifyContent="center"
         py={0}
-        px={4}
-        pb={{ xs: 4, sm: 4, md: 4 }}
+        px={{ xs: 2, sm: 4, md: 4 }}
+        pb={{ xs: 0, sm: 4, md: 4 }}
         gap={2}
         flexWrap="wrap" // Mobile tránh tràn nội dung
       >
         {/* Nội dung bên phải */}
         <Box
           flex={{ xs: "none", sm: 1.4, md: 1.6 }}
-          height={{ xs: "auto", sm: "100%", md: "100%" }}
+          height={{ xs: "560px", sm: "100%", md: "100%" }}
           bgcolor="#16412B"
           color="white"
-          px={8}
+          px={{ xs: 4, sm: 6, md: 6 }}
           py={{ xs: 4, sm: 0, md: 0 }}
           display="flex"
           flexDirection="column"
@@ -75,7 +75,6 @@ export const Harvest = (pros: any) => {
               ease: [0.68, -0.4, 0.4, 1.6],
             }}
           />
-
           {/* Vòng tròn nhỏ */}
           <Box
             sx={{
@@ -119,7 +118,7 @@ export const Harvest = (pros: any) => {
           />
           {/* Nút bấm */}
           <Typography
-            fontSize={{ xs: "4rem", sm: "8rem", md: "8rem" }}
+            fontSize={{ xs: "3rem", sm: "8rem", md: "8rem" }}
             fontWeight="bold"
             color="#D4E051"
             zIndex={1}
@@ -135,7 +134,7 @@ export const Harvest = (pros: any) => {
             03
           </Typography>
           <Typography
-            fontSize={{ xs: "1.6rem", sm: "2rem", md: "2rem" }}
+            fontSize={{ xs: "1.4rem", sm: "2rem", md: "2rem" }}
             fontWeight="bold"
             color="#D4E051"
             zIndex={1}
@@ -151,7 +150,7 @@ export const Harvest = (pros: any) => {
             Thu hoạch
           </Typography>
           <Typography
-            fontSize={{ xs: "0.9rem", sm: "1.1rem", md: "1.1rem" }}
+            fontSize={{ xs: "0.8rem", sm: "1.1rem", md: "1.1rem" }}
             mt={{ xs: 2, sm: 4, md: 4 }}
             zIndex={1}
             lineHeight={2}
@@ -183,12 +182,13 @@ export const Harvest = (pros: any) => {
               delay: 0.5,
               ease: [0.68, -0.4, 0.4, 1.6],
             }}
+            zIndex={4}
           >
             {/* Nút mở sidebar chỉ hiển thị trên mobile */}
             <DoneAllRoundedIcon
               sx={{
-                width: { xs: "36px", sm: "44px", md: "50px" },
-                height: { xs: "36px", sm: "48px", md: "56px" },
+                width: { xs: "32px", sm: "44px", md: "50px" },
+                height: { xs: "32px", sm: "48px", md: "56px" },
                 color: "#D4E051", // Màu chính
                 stroke: "#D4E051",
                 strokeWidth: 0.4, // Độ dày viền
@@ -196,7 +196,7 @@ export const Harvest = (pros: any) => {
             />
 
             <Typography
-              fontSize={{ xs: "0.9rem", sm: "1.1rem", md: "1.1rem" }}
+              fontSize={{ xs: "0.8rem", sm: "1.1rem", md: "1.1rem" }}
               zIndex={1}
               lineHeight={2}
             >
@@ -208,7 +208,7 @@ export const Harvest = (pros: any) => {
             alignItems="center"
             justifyContent="flex-start"
             gap={{ xs: 2, sm: 2, md: 2 }}
-            mt={{ xs: 0, sm: 0, md: 0 }}
+            mt={{ xs: 0, sm: 2, md: 2 }}
             px={{ xs: 0, sm: 0, md: 0 }}
             component={motion.div} // Thêm animation trực tiếp
             initial={{ opacity: 0, x: -200 }}
@@ -223,8 +223,8 @@ export const Harvest = (pros: any) => {
             {/* Nút mở sidebar chỉ hiển thị trên mobile */}
             <DoneAllRoundedIcon
               sx={{
-                width: { xs: "36px", sm: "44px", md: "50px" },
-                height: { xs: "36px", sm: "48px", md: "56px" },
+                width: { xs: "32px", sm: "44px", md: "50px" },
+                height: { xs: "32px", sm: "48px", md: "56px" },
                 color: "#D4E051", // Màu chính
                 stroke: "#D4E051",
                 strokeWidth: 0.4, // Độ dày viền
@@ -232,19 +232,19 @@ export const Harvest = (pros: any) => {
             />
 
             <Typography
-              fontSize={{ xs: "0.9rem", sm: "1.1rem", md: "1.1rem" }}
+              fontSize={{ xs: "0.8rem", sm: "1.1rem", md: "1.1rem" }}
               zIndex={1}
               lineHeight={2}
             >
               Tiêu chuẩn canh tác: hướng đến hữu cơ.
             </Typography>
-          </Box>
+          </Box>{" "}
           <Box
             display="flex"
             alignItems="center"
             justifyContent="flex-start"
             gap={{ xs: 2, sm: 2, md: 2 }}
-            mt={{ xs: 0, sm: 0, md: 0 }}
+            mt={{ xs: 0, sm: 2, md: 2 }}
             px={{ xs: 0, sm: 0, md: 0 }}
             component={motion.div} // Thêm animation trực tiếp
             initial={{ opacity: 0, x: -200 }}
@@ -259,8 +259,8 @@ export const Harvest = (pros: any) => {
             {/* Nút mở sidebar chỉ hiển thị trên mobile */}
             <DoneAllRoundedIcon
               sx={{
-                width: { xs: "36px", sm: "44px", md: "50px" },
-                height: { xs: "36px", sm: "48px", md: "56px" },
+                width: { xs: "32px", sm: "44px", md: "50px" },
+                height: { xs: "32px", sm: "48px", md: "56px" },
                 color: "#D4E051", // Màu chính
                 stroke: "#D4E051",
                 strokeWidth: 0.4, // Độ dày viền
@@ -268,19 +268,19 @@ export const Harvest = (pros: any) => {
             />
 
             <Typography
-              fontSize={{ xs: "0.9rem", sm: "1.1rem", md: "1.1rem" }}
+              fontSize={{ xs: "0.8rem", sm: "1.1rem", md: "1.1rem" }}
               zIndex={1}
               lineHeight={2}
             >
               Tiêu chuẩn canh tác: hướng đến hữu cơ.
             </Typography>
-          </Box>
+          </Box>{" "}
           <Box
             display="flex"
             alignItems="center"
             justifyContent="flex-start"
             gap={{ xs: 2, sm: 2, md: 2 }}
-            mt={{ xs: 0, sm: 0, md: 0 }}
+            mt={{ xs: 0, sm: 2, md: 2 }}
             px={{ xs: 0, sm: 0, md: 0 }}
             component={motion.div} // Thêm animation trực tiếp
             initial={{ opacity: 0, x: -200 }}
@@ -295,8 +295,8 @@ export const Harvest = (pros: any) => {
             {/* Nút mở sidebar chỉ hiển thị trên mobile */}
             <DoneAllRoundedIcon
               sx={{
-                width: { xs: "36px", sm: "44px", md: "50px" },
-                height: { xs: "36px", sm: "48px", md: "56px" },
+                width: { xs: "32px", sm: "44px", md: "50px" },
+                height: { xs: "32px", sm: "48px", md: "56px" },
                 color: "#D4E051", // Màu chính
                 stroke: "#D4E051",
                 strokeWidth: 0.4, // Độ dày viền
@@ -304,7 +304,7 @@ export const Harvest = (pros: any) => {
             />
 
             <Typography
-              fontSize={{ xs: "0.9rem", sm: "1.1rem", md: "1.1rem" }}
+              fontSize={{ xs: "0.8rem", sm: "1.1rem", md: "1.1rem" }}
               zIndex={1}
               lineHeight={2}
             >

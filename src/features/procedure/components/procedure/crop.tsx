@@ -33,14 +33,14 @@ export const Crop = (pros: any) => {
         overflow="hidden"
         justifyContent="center"
         py={2}
-        px={4}
+        px={{ xs: 2, sm: 4, md: 4 }}
         pb={{ xs: "auto", sm: 14, md: 14 }}
         gap={2}
         flexWrap="wrap" // Mobile tránh tràn nội dung
       >
         <Box display="flex" flexDirection="column" justifyContent="center">
           <Typography
-            fontSize={{ xs: "2.4rem", sm: "2.8rem", md: "2.8rem" }}
+            fontSize={{ xs: "2rem", sm: "2.8rem", md: "2.8rem" }}
             fontWeight="bold"
             textAlign="center"
             alignSelf="center"
@@ -69,10 +69,10 @@ export const Crop = (pros: any) => {
           {/* Nội dung bên phải */}
           <Box
             flex={{ xs: "none", sm: 1.4, md: 1.6 }}
-            height={{ xs: "auto", sm: "100%", md: "100%" }}
+            height={{ xs: "560px", sm: "100%", md: "100%" }}
             bgcolor="#16412B"
             color="white"
-            px={8}
+            px={{ xs: 4, sm: 6, md: 6 }}
             py={{ xs: 4, sm: 0, md: 0 }}
             display="flex"
             flexDirection="column"
@@ -144,10 +144,11 @@ export const Crop = (pros: any) => {
                 delay: 0.5,
                 ease: [0.68, -0.4, 0.4, 1.6],
               }}
+              zIndex={4}
             />
             {/* Nút bấm */}
             <Typography
-              fontSize={{ xs: "4rem", sm: "8rem", md: "8rem" }}
+              fontSize={{ xs: "3rem", sm: "8rem", md: "8rem" }}
               fontWeight="bold"
               color="#D4E051"
               zIndex={1}
@@ -163,7 +164,7 @@ export const Crop = (pros: any) => {
               01
             </Typography>
             <Typography
-              fontSize={{ xs: "1.6rem", sm: "2rem", md: "2rem" }}
+              fontSize={{ xs: "1.4rem", sm: "2rem", md: "2rem" }}
               fontWeight="bold"
               color="#D4E051"
               zIndex={1}
@@ -179,7 +180,7 @@ export const Crop = (pros: any) => {
               Trồng trọt
             </Typography>
             <Typography
-              fontSize={{ xs: "0.9rem", sm: "1.1rem", md: "1.1rem" }}
+              fontSize={{ xs: "0.8rem", sm: "1.1rem", md: "1.1rem" }}
               mt={{ xs: 2, sm: 4, md: 4 }}
               zIndex={1}
               lineHeight={2}
@@ -216,8 +217,8 @@ export const Crop = (pros: any) => {
               {/* Nút mở sidebar chỉ hiển thị trên mobile */}
               <DoneAllRoundedIcon
                 sx={{
-                  width: { xs: "36px", sm: "44px", md: "50px" },
-                  height: { xs: "36px", sm: "48px", md: "56px" },
+                  width: { xs: "32px", sm: "44px", md: "50px" },
+                  height: { xs: "32px", sm: "48px", md: "56px" },
                   color: "#D4E051", // Màu chính
                   stroke: "#D4E051",
                   strokeWidth: 0.4, // Độ dày viền
@@ -225,7 +226,7 @@ export const Crop = (pros: any) => {
               />
 
               <Typography
-                fontSize={{ xs: "0.9rem", sm: "1.1rem", md: "1.1rem" }}
+                fontSize={{ xs: "0.8rem", sm: "1.1rem", md: "1.1rem" }}
                 zIndex={1}
                 lineHeight={2}
               >
@@ -237,7 +238,7 @@ export const Crop = (pros: any) => {
               alignItems="center"
               justifyContent="flex-start"
               gap={{ xs: 2, sm: 2, md: 2 }}
-              mt={{ xs: 0, sm: 0, md: 0 }}
+              mt={{ xs: 0, sm: 2, md: 2 }}
               px={{ xs: 0, sm: 0, md: 0 }}
               component={motion.div} // Thêm animation trực tiếp
               initial={{ opacity: 0, x: -200 }}
@@ -252,8 +253,8 @@ export const Crop = (pros: any) => {
               {/* Nút mở sidebar chỉ hiển thị trên mobile */}
               <DoneAllRoundedIcon
                 sx={{
-                  width: { xs: "36px", sm: "44px", md: "50px" },
-                  height: { xs: "36px", sm: "48px", md: "56px" },
+                  width: { xs: "32px", sm: "44px", md: "50px" },
+                  height: { xs: "32px", sm: "48px", md: "56px" },
                   color: "#D4E051", // Màu chính
                   stroke: "#D4E051",
                   strokeWidth: 0.4, // Độ dày viền
@@ -261,7 +262,7 @@ export const Crop = (pros: any) => {
               />
 
               <Typography
-                fontSize={{ xs: "0.9rem", sm: "1.1rem", md: "1.1rem" }}
+                fontSize={{ xs: "0.8rem", sm: "1.1rem", md: "1.1rem" }}
                 zIndex={1}
                 lineHeight={2}
               >
@@ -273,7 +274,7 @@ export const Crop = (pros: any) => {
               alignItems="center"
               justifyContent="flex-start"
               gap={{ xs: 2, sm: 2, md: 2 }}
-              mt={{ xs: 0, sm: 0, md: 0 }}
+              mt={{ xs: 0, sm: 2, md: 2 }}
               px={{ xs: 0, sm: 0, md: 0 }}
               component={motion.div} // Thêm animation trực tiếp
               initial={{ opacity: 0, x: -200 }}
@@ -288,8 +289,8 @@ export const Crop = (pros: any) => {
               {/* Nút mở sidebar chỉ hiển thị trên mobile */}
               <DoneAllRoundedIcon
                 sx={{
-                  width: { xs: "36px", sm: "44px", md: "50px" },
-                  height: { xs: "36px", sm: "48px", md: "56px" },
+                  width: { xs: "32px", sm: "44px", md: "50px" },
+                  height: { xs: "32px", sm: "48px", md: "56px" },
                   color: "#D4E051", // Màu chính
                   stroke: "#D4E051",
                   strokeWidth: 0.4, // Độ dày viền
@@ -297,7 +298,7 @@ export const Crop = (pros: any) => {
               />
 
               <Typography
-                fontSize={{ xs: "0.9rem", sm: "1.1rem", md: "1.1rem" }}
+                fontSize={{ xs: "0.8rem", sm: "1.1rem", md: "1.1rem" }}
                 zIndex={1}
                 lineHeight={2}
               >
@@ -309,7 +310,7 @@ export const Crop = (pros: any) => {
               alignItems="center"
               justifyContent="flex-start"
               gap={{ xs: 2, sm: 2, md: 2 }}
-              mt={{ xs: 0, sm: 0, md: 0 }}
+              mt={{ xs: 0, sm: 2, md: 2 }}
               px={{ xs: 0, sm: 0, md: 0 }}
               component={motion.div} // Thêm animation trực tiếp
               initial={{ opacity: 0, x: -200 }}
@@ -324,8 +325,8 @@ export const Crop = (pros: any) => {
               {/* Nút mở sidebar chỉ hiển thị trên mobile */}
               <DoneAllRoundedIcon
                 sx={{
-                  width: { xs: "36px", sm: "44px", md: "50px" },
-                  height: { xs: "36px", sm: "48px", md: "56px" },
+                  width: { xs: "32px", sm: "44px", md: "50px" },
+                  height: { xs: "32px", sm: "48px", md: "56px" },
                   color: "#D4E051", // Màu chính
                   stroke: "#D4E051",
                   strokeWidth: 0.4, // Độ dày viền
@@ -333,7 +334,7 @@ export const Crop = (pros: any) => {
               />
 
               <Typography
-                fontSize={{ xs: "0.9rem", sm: "1.1rem", md: "1.1rem" }}
+                fontSize={{ xs: "0.8rem", sm: "1.1rem", md: "1.1rem" }}
                 zIndex={1}
                 lineHeight={2}
               >
@@ -348,7 +349,7 @@ export const Crop = (pros: any) => {
             src={Harvesting_section2}
             alt="Vườn cam"
             sx={{
-              height: { xs: "500px", sm: "100%", md: "100%" }, // Mobile: ảnh lớn hơn
+              height: { xs: "480px", sm: "100%", md: "100%" }, // Mobile: ảnh lớn hơn
               width: { xs: "100%", sm: "50%", md: "100%" },
               objectFit: "cover",
               borderRadius: { xs: 12, sm: 16, md: 16 },

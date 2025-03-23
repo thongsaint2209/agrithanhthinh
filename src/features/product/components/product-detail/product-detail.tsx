@@ -25,9 +25,12 @@ export const ProductDetail = (props: any) => {
   const navigate = useNavigate();
   // Dùng useInView để phát hiện khi phần tử hiển thị 60% trên màn hình
   const getThreshold = () => {
-    if (window.innerWidth < 700) return 0.1; // Mobile
-    if (window.innerWidth < 960) return 0.2; // Tablet
-    return 0.6; // Desktop
+    console.log(innerWidth);
+    if (window.innerWidth < 600) return 0.1; // Mobile
+    if (window.innerWidth < 1000) return 0.1; // Tablet
+    if (window.innerWidth < 1400) return 0.3; // Tablet
+    if (window.innerWidth < 1500) return 0.3; // Tablet
+    return 0.3; // Desktop
   };
 
   const { ref, inView } = useInView({
@@ -137,7 +140,7 @@ export const ProductDetail = (props: any) => {
         {/* Nội dung bên phải */}
         <Box
           flex={{ xs: "none", sm: 1.4, md: 1.6 }}
-          height={{ xs: "1400px", sm: "1560px", md: "100%" }}
+          height={{ xs: "1360px", sm: "1560px", md: "100%" }}
           width={{ xs: "100%", sm: "100%", md: "100%" }}
           bgcolor="#16412B"
           color="white"

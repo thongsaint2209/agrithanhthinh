@@ -212,7 +212,7 @@ export const Certificate = (pros: any) => {
                   delay: 0.5,
                   ease: [0.68, -0.4, 0.4, 1.6],
                 }}
-                pb={{ xs: 0, sm: 2, md: 2 }}
+                pb={{ xs: 1, sm: 2, md: 2 }}
               >
                 Tiêu chuẩn & Chứng nhận
               </Typography>
