@@ -223,7 +223,7 @@ export const ListProduct = () => {
                     variant="contained"
                     sx={{
                       mt: 3,
-                      width: { xs: "170px", sm: "200px", md: "200px" },
+                      width: { xs: "160px", sm: "200px", md: "200px" },
                       fontSize: { xs: "0.9rem", sm: "1rem", md: "1rem" },
                       padding: "10px 20px",
                       borderRadius: 16,

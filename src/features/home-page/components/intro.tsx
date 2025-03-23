@@ -28,7 +28,7 @@ export const Intro = (pros: any) => {
   };
 
   return (
-    <Box ref={ref} display="flex" flexDirection="column">
+    <Box ref={ref} display="flex" flexDirection="column" width="100%">
       {/* Section 2 */}
       <Box
         display="flex"
@@ -36,22 +36,22 @@ export const Intro = (pros: any) => {
         height={{ xs: "auto", sm: "800px", md: "800px" }} // PC: 940px, Mobile: auto
         bgcolor="black"
         overflow="hidden"
-        p={4}
+        p={{ xs: 2, sm: 4, md: 4 }}
         gap={4}
         flexWrap="wrap" // Mobile tránh tràn nội dung
       >
         {/* Nội dung bên phải */}
         <Box
           flex={{ xs: "none", sm: 1.4, md: 1.6 }}
-          height={{ xs: "auto", sm: "100%", md: "100%" }}
+          height={{ xs: "540px", sm: "100%", md: "100%" }}
           bgcolor="#16412B"
           color="white"
-          p={8}
+          p={{ xs: 6, sm: 8, md: 8 }}
           display="flex"
           flexDirection="column"
           justifyContent="flex-start"
           borderRadius={{ xs: 12, sm: 16, md: 16 }}
-          gap={{ xs: 6, sm: 8, md: 8 }}
+          gap={{ xs: 4, sm: 8, md: 10 }}
           position="relative"
           overflow="hidden"
         >
@@ -114,8 +114,8 @@ export const Intro = (pros: any) => {
             alt="Cam"
             sx={{
               position: "absolute",
-              width: { xs: "280px", sm: "300px", md: "340px" },
-              height: { xs: "280px", sm: "300px", md: "340px" },
+              width: { xs: "240px", sm: "300px", md: "340px" },
+              height: { xs: "240px", sm: "300px", md: "340px" },
               objectFit: "cover",
               bottom: "-80px",
               right: "-90px",
@@ -125,7 +125,7 @@ export const Intro = (pros: any) => {
 
           {/* Nút bấm */}
           <Typography
-            fontSize={{ xs: "1.6rem", sm: "2rem", md: "2rem" }}
+            fontSize={{ xs: "1.4rem", sm: "2rem", md: "2rem" }}
             fontWeight="bold"
             color="#D4E051"
             zIndex={1}
@@ -142,8 +142,7 @@ export const Intro = (pros: any) => {
           </Typography>
 
           <Typography
-            fontSize={{ xs: "1rem", sm: "1.2rem", md: "1.2rem" }}
-            mt={{ xs: 0, sm: 2, md: 2 }}
+            fontSize={{ xs: "0.9rem", sm: "1.2rem", md: "1.2rem" }}
             zIndex={1}
             lineHeight={2}
             component={motion.div} // Thêm animation trực tiếp
@@ -173,8 +172,7 @@ export const Intro = (pros: any) => {
             <Button
               variant="contained"
               sx={{
-                mt: 3,
-                width: { xs: "170px", sm: "200px", md: "200px" },
+                width: { xs: "160px", sm: "200px", md: "200px" },
                 fontSize: { xs: "0.9rem", sm: "1rem", md: "1rem" },
                 padding: "10px 20px",
                 borderRadius: 16,
@@ -192,7 +190,7 @@ export const Intro = (pros: any) => {
           src={Harvesting_section2}
           alt="Vườn cam"
           sx={{
-            height: { xs: "780px", sm: "100%", md: "100%" }, // Mobile: ảnh lớn hơn
+            height: { xs: "540px", sm: "100%", md: "100%" }, // Mobile: ảnh lớn hơn
             width: { xs: "100%", sm: "50%", md: "100%" },
             objectFit: "cover",
             borderRadius: { xs: 12, sm: 16, md: 16 },

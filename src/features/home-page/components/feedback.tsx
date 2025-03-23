@@ -21,15 +21,16 @@ export const Feedback = () => {
   });
 
   return (
-    <Box ref={ref} display="flex" flexDirection="column">
+    <Box ref={ref} display="flex" flexDirection="column" width="100%">
       {/* Section 2 */}
       <Box
         display="flex"
         flexDirection={{ xs: "column", sm: "row", md: "row" }}
-        height={{ xs: "2000px", sm: "900px", md: "900px" }} // PC: 940px, Mobile: auto
+        width="100%"
+        height={{ xs: "1940px", sm: "900px", md: "900px" }} // PC: 940px, Mobile: auto
         bgcolor="black"
         overflow="hidden"
-        p={4}
+        p={{ xs: 2, sm: 4, md: 4 }}
         gap={4}
         flexWrap="wrap" // Mobile tránh tràn nội dung
       >
@@ -39,7 +40,7 @@ export const Feedback = () => {
           height={{ xs: "100%", sm: "100%", md: "100%" }}
           bgcolor="#16412B"
           color="white"
-          p={8}
+          p={{ xs: 6, sm: 8, md: 8 }}
           display="flex"
           flexDirection="column"
           borderRadius={{ xs: 12, sm: 16, md: 16 }}
@@ -120,8 +121,8 @@ export const Feedback = () => {
             >
               <Box
                 sx={{
-                  width: { xs: "260px", sm: "260px", md: "300px" },
-                  height: { xs: "260px", sm: "260px", md: "300px" },
+                  width: { xs: "240px", sm: "260px", md: "300px" },
+                  height: { xs: "240px", sm: "260px", md: "300px" },
                   bgcolor: "#7EE87B",
                   borderRadius: "30px 100px 30px 30px",
                   position: "relative",
@@ -142,7 +143,7 @@ export const Feedback = () => {
               }}
             >
               <Typography
-                fontSize={{ xs: "1rem", sm: "1.1rem", md: "1.2rem" }}
+                fontSize={{ xs: "0.9rem", sm: "1.1rem", md: "1.2rem" }}
                 fontWeight="bold"
                 color="#000"
                 mb={1}
@@ -161,7 +162,7 @@ export const Feedback = () => {
                 như mong đợi.”
               </Typography>
               <Typography
-                fontSize={{ xs: "1rem", sm: "1.1rem", md: "1.2rem" }}
+                fontSize={{ xs: "0.9rem", sm: "1.1rem", md: "1.2rem" }}
                 fontWeight="bold"
                 color="#000"
               >
@@ -197,8 +198,8 @@ export const Feedback = () => {
             >
               <Box
                 sx={{
-                  width: { xs: "260px", sm: "260px", md: "300px" },
-                  height: { xs: "260px", sm: "260px", md: "300px" },
+                  width: { xs: "240px", sm: "260px", md: "300px" },
+                  height: { xs: "240px", sm: "260px", md: "300px" },
                   bgcolor: "#F8F85D",
                   borderRadius: "30px 100px 30px 30px",
                   position: "relative",
@@ -219,7 +220,7 @@ export const Feedback = () => {
               }}
             >
               <Typography
-                fontSize={{ xs: "1rem", sm: "1.1rem", md: "1.2rem" }}
+                fontSize={{ xs: "0.9rem", sm: "1.1rem", md: "1.2rem" }}
                 fontWeight="bold"
                 color="#000"
                 mb={1}
@@ -238,7 +239,7 @@ export const Feedback = () => {
                 như mong đợi.”
               </Typography>
               <Typography
-                fontSize={{ xs: "1rem", sm: "1.1rem", md: "1.2rem" }}
+                fontSize={{ xs: "0.9rem", sm: "1.1rem", md: "1.2rem" }}
                 fontWeight="bold"
                 color="#000"
               >
@@ -274,8 +275,8 @@ export const Feedback = () => {
             >
               <Box
                 sx={{
-                  width: { xs: "260px", sm: "260px", md: "300px" },
-                  height: { xs: "260px", sm: "260px", md: "300px" },
+                  width: { xs: "240px", sm: "260px", md: "300px" },
+                  height: { xs: "240px", sm: "260px", md: "300px" },
                   bgcolor: "#FF9340",
                   borderRadius: "30px 100px 30px 30px",
                   position: "relative",
@@ -296,7 +297,7 @@ export const Feedback = () => {
               }}
             >
               <Typography
-                fontSize={{ xs: "1rem", sm: "1.1rem", md: "1.2rem" }}
+                fontSize={{ xs: "0.9rem", sm: "1.1rem", md: "1.2rem" }}
                 fontWeight="bold"
                 color="#000"
                 mb={1}
@@ -315,7 +316,7 @@ export const Feedback = () => {
                 như mong đợi.”
               </Typography>
               <Typography
-                fontSize={{ xs: "1rem", sm: "1.1rem", md: "1.2rem" }}
+                fontSize={{ xs: "0.9rem", sm: "1.1rem", md: "1.2rem" }}
                 fontWeight="bold"
                 color="#000"
               >
@@ -351,8 +352,8 @@ export const Feedback = () => {
             >
               <Box
                 sx={{
-                  width: { xs: "260px", sm: "260px", md: "300px" },
-                  height: { xs: "260px", sm: "260px", md: "300px" },
+                  width: { xs: "240px", sm: "260px", md: "300px" },
+                  height: { xs: "240px", sm: "260px", md: "300px" },
                   bgcolor: "#EDF336",
                   borderRadius: "30px 100px 30px 30px",
                   position: "relative",
@@ -373,7 +374,7 @@ export const Feedback = () => {
               }}
             >
               <Typography
-                fontSize={{ xs: "1rem", sm: "1.1rem", md: "1.2rem" }}
+                fontSize={{ xs: "0.9rem", sm: "1.1rem", md: "1.2rem" }}
                 fontWeight="bold"
                 color="#000"
                 mb={1}
@@ -392,7 +393,7 @@ export const Feedback = () => {
                 như mong đợi.”
               </Typography>
               <Typography
-                fontSize={{ xs: "1rem", sm: "1.1rem", md: "1.2rem" }}
+                fontSize={{ xs: "0.9rem", sm: "1.1rem", md: "1.2rem" }}
                 fontWeight="bold"
                 color="#000"
               >
@@ -428,8 +429,8 @@ export const Feedback = () => {
             >
               <Box
                 sx={{
-                  width: { xs: "260px", sm: "260px", md: "300px" },
-                  height: { xs: "260px", sm: "260px", md: "300px" },
+                  width: { xs: "240px", sm: "260px", md: "300px" },
+                  height: { xs: "240px", sm: "260px", md: "300px" },
                   bgcolor: "#FFB94F",
                   borderRadius: "30px 100px 30px 30px",
                   position: "relative",
@@ -450,7 +451,7 @@ export const Feedback = () => {
               }}
             >
               <Typography
-                fontSize={{ xs: "1rem", sm: "1.1rem", md: "1.2rem" }}
+                fontSize={{ xs: "0.9rem", sm: "1.1rem", md: "1.2rem" }}
                 fontWeight="bold"
                 color="#000"
                 mb={1}
@@ -469,7 +470,7 @@ export const Feedback = () => {
                 như mong đợi.”
               </Typography>
               <Typography
-                fontSize={{ xs: "1rem", sm: "1.1rem", md: "1.2rem" }}
+                fontSize={{ xs: "0.9rem", sm: "1.1rem", md: "1.2rem" }}
                 fontWeight="bold"
                 color="#000"
               >
@@ -505,8 +506,8 @@ export const Feedback = () => {
             >
               <Box
                 sx={{
-                  width: { xs: "260px", sm: "260px", md: "300px" },
-                  height: { xs: "260px", sm: "260px", md: "300px" },
+                  width: { xs: "240px", sm: "260px", md: "300px" },
+                  height: { xs: "240px", sm: "260px", md: "300px" },
                   bgcolor: "#37CC32",
                   borderRadius: "30px 100px 30px 30px",
                   position: "relative",
@@ -527,7 +528,7 @@ export const Feedback = () => {
               }}
             >
               <Typography
-                fontSize={{ xs: "1rem", sm: "1.1rem", md: "1.2rem" }}
+                fontSize={{ xs: "0.9rem", sm: "1.1rem", md: "1.2rem" }}
                 fontWeight="bold"
                 color="#000"
                 mb={1}
@@ -546,7 +547,7 @@ export const Feedback = () => {
                 như mong đợi.”
               </Typography>
               <Typography
-                fontSize={{ xs: "1rem", sm: "1.1rem", md: "1.2rem" }}
+                fontSize={{ xs: "0.9rem", sm: "1.1rem", md: "1.2rem" }}
                 fontWeight="bold"
                 color="#000"
               >
@@ -556,7 +557,7 @@ export const Feedback = () => {
           </Box>
           {/* Nội dung */}
           <Typography
-            fontSize={{ xs: "1.8rem", sm: "2.2rem", md: "2.2rem" }}
+            fontSize={{ xs: "1.4rem", sm: "2.2rem", md: "2.2rem" }}
             fontWeight="bold"
             color="#D4E051"
             zIndex={1}

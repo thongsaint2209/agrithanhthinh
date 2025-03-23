@@ -30,10 +30,11 @@ export const MainLayout = (props: any) => {
           flexDirection="column"
           flex={1}
           pt={`${navbarHeight}px`}
+          width="100%"
         >
           <Outlet />
         </Box>
-        <Box display="flex" flexDirection="column" flex={1}>
+        <Box display="flex" flexDirection="column" flex={1} width="100%">
           <Footer />
         </Box>
       </Box>

@@ -25,15 +25,15 @@ export const CardAchieve = (pros: any) => {
       {/* Section 2 */}
 
       <Box
-        width={{ xs: "240px", sm: "450px", md: "450px" }}
-        height={{ xs: "240px", sm: "380px", md: "380px" }}
+        width={{ xs: "174px", sm: "450px", md: "450px" }}
+        height={{ xs: "174px", sm: "380px", md: "380px" }}
         bgcolor="#29262C"
         color="white"
-        p={{ xs: 3, sm: 10, md: 10 }}
+        p={{ xs: 0, sm: 10, md: 10 }}
         display="flex"
         flexDirection="column"
         justifyContent="center"
-        borderRadius={{ xs: 12, sm: 16, md: 16 }}
+        borderRadius={{ xs: 8, sm: 16, md: 16 }}
         sx={{ overflow: "hidden" }}
         component={motion.div} // Chỉ khai báo motion.div một lần duy nhất
         variants={{
@@ -54,7 +54,7 @@ export const CardAchieve = (pros: any) => {
         <motion.div
           variants={{
             initial: { opacity: 1, y: 100 }, // Ẩn ở dưới đáy
-            hover: { opacity: 1, y: 0 }, // Khi hover, hiện lên từ từ
+            hover: { opacity: 1, y: -20 }, // Khi hover, hiện lên từ từ
           }}
           transition={{
             duration: 1,
@@ -67,12 +67,16 @@ export const CardAchieve = (pros: any) => {
             display="flex"
             flexDirection="row"
             alignItems="center"
-            justifyContent="flex-start"
-            gap={2}
+            justifyContent={{
+              xs: "center",
+              sm: "flex-start",
+              md: "flex-start",
+            }}
+            gap={{ xs: 1, sm: 2, md: 2 }}
           >
             <Box
-              width={{ xs: "44px", sm: "62px", md: "62px" }}
-              height={{ xs: "44px", sm: "62px", md: "62px" }}
+              width={{ xs: "38px", sm: "62px", md: "62px" }}
+              height={{ xs: "38px", sm: "62px", md: "62px" }}
               borderRadius={{ xs: 4, sm: 4, md: 4 }}
               bgcolor={pros.color}
               display="flex"
@@ -83,7 +87,7 @@ export const CardAchieve = (pros: any) => {
               {pros.icon}
             </Box>
             <Typography
-              fontSize={{ xs: "1.2rem", sm: "2.2rem", md: "2.2rem" }}
+              fontSize={{ xs: "0.9rem", sm: "2.2rem", md: "2.2rem" }}
               fontWeight="bold"
               color="#ffff"
               zIndex={1}
@@ -107,10 +111,13 @@ export const CardAchieve = (pros: any) => {
           }}
         >
           <Typography
-            fontSize={{ xs: "0.81rem", sm: "1rem", md: "1rem" }}
+            fontSize={{ xs: "0.6rem", sm: "1rem", md: "1rem" }}
             mt={{ xs: 0, sm: 2, md: 2 }}
             lineHeight={{ xs: 2, sm: 2, md: 2 }}
-            textAlign="start"
+            textAlign={{ xs: "center", sm: "start", md: "start" }}
+            px={{ xs: 2, sm: 0, md: 0 }}
+            py={{ xs: 1, sm: 0, md: 0 }}
+            pb={{ xs: 6, sm: 0, md: 0 }}
           >
             {pros.description}
           </Typography>

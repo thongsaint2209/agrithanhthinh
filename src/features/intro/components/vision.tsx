@@ -44,13 +44,13 @@ export const Vision = (pros: any) => {
         display="flex"
         flexDirection={{ xs: "column", sm: "row", md: "row" }}
         height={{
-          xs: `calc(${newHeight}px - 220px)`,
+          xs: `calc(${newHeight}px - 260px)`,
           sm: `${newHeight}px`,
           md: `${newHeight}px`,
         }} // PC: 940px, Mobile: auto
         bgcolor="black"
         overflow="hidden"
-        p={4}
+        p={2}
         gap={4}
         alignItems="flex-start" // Căn giữa các phần tử con theo chiều dọc
         justifyContent="flex-start"
@@ -69,7 +69,7 @@ export const Vision = (pros: any) => {
             bgcolor="#16412B"
             color="white"
             pt={{ xs: 4, sm: 8, md: 8 }}
-            px={{ xs: 4, sm: 8, md: 8 }}
+            px={{ xs: 2, sm: 8, md: 8 }}
             display="flex"
             flexDirection="column"
             justifyContent="flex-start"
@@ -200,7 +200,7 @@ export const Vision = (pros: any) => {
               <Typography
                 textAlign="center"
                 alignSelf="center"
-                fontSize={{ xs: "1.6rem", sm: "2rem", md: "2rem" }}
+                fontSize={{ xs: "1.4rem", sm: "2rem", md: "2rem" }}
                 fontWeight="bold"
                 color="#D4E051"
                 zIndex={1}
@@ -218,7 +218,7 @@ export const Vision = (pros: any) => {
               </Typography>
 
               <Typography
-                fontSize={{ xs: "0.9rem", sm: "1.1rem", md: "1.2rem" }}
+                fontSize={{ xs: "0.8rem", sm: "1.1rem", md: "1.2rem" }}
                 px={{ xs: 4, sm: 10, md: 28 }}
                 mt={{ xs: 1, sm: 2, md: 2 }}
                 zIndex={1}
@@ -261,8 +261,8 @@ export const Vision = (pros: any) => {
                 {/* Nút mở sidebar chỉ hiển thị trên mobile */}
                 <DoneAllRoundedIcon
                   sx={{
-                    width: { xs: "36px", sm: "44px", md: "50px" },
-                    height: { xs: "36px", sm: "48px", md: "56px" },
+                    width: { xs: "32px", sm: "44px", md: "50px" },
+                    height: { xs: "32px", sm: "48px", md: "56px" },
                     color: "#D4E051", // Màu chính
                     stroke: "#D4E051",
                     strokeWidth: 0.4, // Độ dày viền
@@ -270,7 +270,7 @@ export const Vision = (pros: any) => {
                 />
 
                 <Typography
-                  fontSize={{ xs: "0.9rem", sm: "1.1rem", md: "1.1rem" }}
+                  fontSize={{ xs: "0.8rem", sm: "1.1rem", md: "1.1rem" }}
                   zIndex={1}
                   lineHeight={2}
                 >
@@ -296,8 +296,8 @@ export const Vision = (pros: any) => {
                 {/* Nút mở sidebar chỉ hiển thị trên mobile */}
                 <DoneAllRoundedIcon
                   sx={{
-                    width: { xs: "36px", sm: "44px", md: "50px" },
-                    height: { xs: "36px", sm: "48px", md: "56px" },
+                    width: { xs: "32px", sm: "44px", md: "50px" },
+                    height: { xs: "32px", sm: "48px", md: "56px" },
                     color: "#D4E051", // Màu chính
                     stroke: "#D4E051",
                     strokeWidth: 0.4, // Độ dày viền
@@ -305,7 +305,7 @@ export const Vision = (pros: any) => {
                 />
 
                 <Typography
-                  fontSize={{ xs: "0.9rem", sm: "1.1rem", md: "1.1rem" }}
+                  fontSize={{ xs: "0.8rem", sm: "1.1rem", md: "1.1rem" }}
                   zIndex={1}
                   lineHeight={2}
                 >
@@ -331,8 +331,8 @@ export const Vision = (pros: any) => {
                 {/* Nút mở sidebar chỉ hiển thị trên mobile */}
                 <DoneAllRoundedIcon
                   sx={{
-                    width: { xs: "36px", sm: "44px", md: "50px" },
-                    height: { xs: "36px", sm: "48px", md: "56px" },
+                    width: { xs: "32px", sm: "44px", md: "50px" },
+                    height: { xs: "32px", sm: "48px", md: "56px" },
                     color: "#D4E051", // Màu chính
                     stroke: "#D4E051",
                     strokeWidth: 0.4, // Độ dày viền
@@ -340,7 +340,7 @@ export const Vision = (pros: any) => {
                 />
 
                 <Typography
-                  fontSize={{ xs: "0.9rem", sm: "1.1rem", md: "1.1rem" }}
+                  fontSize={{ xs: "0.8rem", sm: "1.1rem", md: "1.1rem" }}
                   zIndex={1}
                   lineHeight={2}
                 >
@@ -366,8 +366,8 @@ export const Vision = (pros: any) => {
                 {/* Nút mở sidebar chỉ hiển thị trên mobile */}
                 <DoneAllRoundedIcon
                   sx={{
-                    width: { xs: "36px", sm: "44px", md: "50px" },
-                    height: { xs: "36px", sm: "48px", md: "56px" },
+                    width: { xs: "32px", sm: "44px", md: "50px" },
+                    height: { xs: "32px", sm: "48px", md: "56px" },
                     color: "#D4E051", // Màu chính
                     stroke: "#D4E051",
                     strokeWidth: 0.4, // Độ dày viền
@@ -375,7 +375,7 @@ export const Vision = (pros: any) => {
                 />
 
                 <Typography
-                  fontSize={{ xs: "0.9rem", sm: "1.1rem", md: "1.1rem" }}
+                  fontSize={{ xs: "0.8rem", sm: "1.1rem", md: "1.1rem" }}
                   zIndex={1}
                   lineHeight={2}
                 >

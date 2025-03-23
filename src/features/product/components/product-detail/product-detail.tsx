@@ -67,7 +67,7 @@ export const ProductDetail = (props: any) => {
         overflow="hidden"
         justifyContent="flex-start"
         py={2}
-        px={4}
+        px={{ xs: 2, sm: 4, md: 4 }}
         pb={{ xs: "auto", sm: 8, md: 14 }}
         gap={2}
         flexWrap="wrap" // Mobile tránh tràn nội dung
@@ -77,7 +77,7 @@ export const ProductDetail = (props: any) => {
           flexDirection="row"
           alignItems="center"
           justifyContent="center"
-          width="97%"
+          width={{ xs: "86%", sm: "97%", md: "97%" }}
         >
           {/* Icon quay lại */}
           <Box
@@ -113,7 +113,7 @@ export const ProductDetail = (props: any) => {
 
           {/* Tiêu đề sản phẩm */}
           <Typography
-            fontSize={{ xs: "2.4rem", sm: "2.8rem", md: "2.8rem" }}
+            fontSize={{ xs: "2rem", sm: "2.8rem", md: "2.8rem" }}
             fontWeight="bold"
             textAlign="center"
             color="white"
@@ -138,10 +138,11 @@ export const ProductDetail = (props: any) => {
         <Box
           flex={{ xs: "none", sm: 1.4, md: 1.6 }}
           height={{ xs: "1400px", sm: "1560px", md: "100%" }}
+          width={{ xs: "100%", sm: "100%", md: "100%" }}
           bgcolor="#16412B"
           color="white"
-          px={{ xs: 4, sm: 50, md: 12 }}
-          py={{ xs: 4, sm: 4, md: 8 }}
+          px={{ xs: 2, sm: 50, md: 12 }}
+          py={{ xs: 2, sm: 4, md: 8 }}
           display="flex"
           flexDirection="column"
           justifyContent="flex-start"
@@ -209,7 +210,7 @@ export const ProductDetail = (props: any) => {
               display="flex"
               flexDirection="column"
               justifyContent={{
-                xs: "flex-start",
+                xs: "center",
                 sm: "center",
                 md: "flex-start",
               }}
@@ -221,7 +222,7 @@ export const ProductDetail = (props: any) => {
                 src={selectedImage}
                 alt="Ảnh lớn"
                 sx={{
-                  height: { xs: "380px", sm: "460px", md: "460px" },
+                  height: { xs: "320px", sm: "460px", md: "460px" },
                   width: "100%",
                   objectFit: "cover",
                   borderRadius: { xs: 12, sm: 12, md: 12 },
@@ -247,7 +248,7 @@ export const ProductDetail = (props: any) => {
                   display="flex"
                   flexDirection="row"
                   justifyContent="flex-start"
-                  gap={{ xs: 2, sm: 4, md: 4 }}
+                  gap={{ xs: 1, sm: 4, md: 4 }}
                   sx={{
                     p: 1,
                     overflowX: "auto",
@@ -277,8 +278,8 @@ export const ProductDetail = (props: any) => {
                         src={img}
                         alt={`Ảnh ${startIndex + index + 1}`}
                         sx={{
-                          height: { xs: "80px", sm: "140px", md: "120px" },
-                          width: { xs: "80px", sm: "140px", md: "120px" },
+                          height: { xs: "64px", sm: "140px", md: "120px" },
+                          width: { xs: "64px", sm: "140px", md: "120px" },
                           objectFit: "cover",
                           borderRadius: { xs: 4, sm: 6, md: 6 },
                           cursor: "pointer",
@@ -376,7 +377,7 @@ export const ProductDetail = (props: any) => {
               gap={{ xs: 2, sm: 2, md: 2 }}
             >
               <Typography
-                fontSize={{ xs: "1.8rem", sm: "2.4rem", md: "2.4rem" }}
+                fontSize={{ xs: "1.4rem", sm: "2.4rem", md: "2.4rem" }}
                 fontWeight="bold"
                 color="#D4E051"
                 zIndex={1}
@@ -398,7 +399,7 @@ export const ProductDetail = (props: any) => {
                 alignItems="center"
               >
                 <Typography
-                  fontSize={{ xs: "1.4rem", sm: "1.8rem", md: "1.8rem" }}
+                  fontSize={{ xs: "1.2rem", sm: "1.8rem", md: "1.8rem" }}
                   fontWeight="bold"
                   color="#D4E051"
                   zIndex={1}
@@ -462,7 +463,7 @@ export const ProductDetail = (props: any) => {
               />
 
               <Typography
-                fontSize={{ xs: "1.4rem", sm: "1.6rem", md: "1.6rem" }}
+                fontSize={{ xs: "1.2rem", sm: "1.6rem", md: "1.6rem" }}
                 fontWeight="bold"
                 color="#D4E051"
                 zIndex={1}
@@ -479,7 +480,7 @@ export const ProductDetail = (props: any) => {
               </Typography>
 
               <Typography
-                fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}
+                fontSize={{ xs: "0.8rem", sm: "1rem", md: "1rem" }}
                 mt={{ xs: 0, sm: 0, md: 0 }}
                 zIndex={1}
                 lineHeight={2}
@@ -512,7 +513,7 @@ export const ProductDetail = (props: any) => {
                 zIndex={1}
               />
               <Typography
-                fontSize={{ xs: "1.4rem", sm: "1.6rem", md: "1.6rem" }}
+                fontSize={{ xs: "1.2rem", sm: "1.6rem", md: "1.6rem" }}
                 fontWeight="bold"
                 color="#D4E051"
                 zIndex={1}
@@ -553,7 +554,7 @@ export const ProductDetail = (props: any) => {
                       <Box>
                         <Typography
                           fontSize={{
-                            xs: "1rem",
+                            xs: "0.9rem",
                             sm: "1.1rem",
                             md: "1.1rem",
                           }}
@@ -611,7 +612,7 @@ export const ProductDetail = (props: any) => {
                       sx={{ overflow: "hidden" }}
                     >
                       <Typography
-                        fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}
+                        fontSize={{ xs: "0.8rem", sm: "1rem", md: "1rem" }}
                         zIndex={1}
                         lineHeight={2}
                       >

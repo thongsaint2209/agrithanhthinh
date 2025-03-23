@@ -48,7 +48,7 @@ export const Footer = () => {
             alignItems="center"
             justifyContent="space-between"
             flexDirection="row"
-            gap={2}
+            gap={{ xs: 1, sm: 2, md: 2 }}
             component={motion.div} // Thêm animation trực tiếp
             initial={{ opacity: 0, x: -200 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -59,8 +59,8 @@ export const Footer = () => {
             }}
           >
             <Box
-              width={{ xs: "54px", sm: "70px", md: "70px" }}
-              height={{ xs: "54px", sm: "70px", md: "70px" }}
+              width={{ xs: "38px", sm: "70px", md: "70px" }}
+              height={{ xs: "38px", sm: "70px", md: "70px" }}
               component="img"
               src={Logo}
             />
@@ -71,14 +71,14 @@ export const Footer = () => {
               flexDirection="column"
             >
               <Typography
-                fontSize={{ xs: "1rem", sm: "1.6rem", md: "1.4rem" }}
+                fontSize={{ xs: "0.8rem", sm: "1.6rem", md: "1.4rem" }}
                 fontWeight="bold"
                 color="green"
               >
                 Thuong Thinh Agri
               </Typography>
               <Typography
-                fontSize={{ xs: "1rem", sm: "1.2rem", md: "1.2rem" }}
+                fontSize={{ xs: "0.8rem", sm: "1.2rem", md: "1.2rem" }}
                 color="green"
               >
                 Vị Ngon Từ Đất Việt
@@ -89,7 +89,7 @@ export const Footer = () => {
           <Box
             display="flex"
             alignItems="center"
-            gap={{ xs: 3, sm: 8, md: 8 }}
+            gap={{ xs: 2, sm: 8, md: 8 }}
             component={motion.div} // Thêm animation trực tiếp
             initial={{ opacity: 0, x: 200 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -184,7 +184,7 @@ export const Footer = () => {
         flexWrap="wrap"
         alignItems="flex-start"
         justifyContent="space-between"
-        gap={4}
+        gap={{ xs: 2, sm: 4, md: 4 }}
         component={motion.div} // Thêm animation trực tiếp
         initial={{ opacity: 0, x: -200 }}
         animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -205,22 +205,22 @@ export const Footer = () => {
             alignItems="flex-start"
             justifyContent="space-between"
             flexDirection="column"
-            gap={3}
+            gap={{ xs: 2, sm: 3, md: 3 }}
           >
             <Typography
-              fontSize={{ xs: "1.2rem", sm: "1.4rem", md: "1.4rem" }}
+              fontSize={{ xs: "1rem", sm: "1.4rem", md: "1.4rem" }}
               fontWeight="bold"
               color="green"
             >
               Giới thiệu
             </Typography>
-            <Typography fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}>
+            <Typography fontSize={{ xs: "0.8rem", sm: "1rem", md: "1rem" }}>
               Sứ mệnh & tầm nhìn
             </Typography>
-            <Typography fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}>
+            <Typography fontSize={{ xs: "0.8rem", sm: "1rem", md: "1rem" }}>
               Quá trình hình thành
             </Typography>
-            <Typography fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}>
+            <Typography fontSize={{ xs: "0.8rem", sm: "1rem", md: "1rem" }}>
               Tiêu chuẩn & chứng nhận
             </Typography>
           </Box>
@@ -237,19 +237,19 @@ export const Footer = () => {
             alignItems="flex-start"
             justifyContent="space-between"
             flexDirection="column"
-            gap={3}
+            gap={{ xs: 2, sm: 3, md: 3 }}
           >
             <Typography
-              fontSize={{ xs: "1.2rem", sm: "1.4rem", md: "1.4rem" }}
+              fontSize={{ xs: "1rem", sm: "1.4rem", md: "1.4rem" }}
               fontWeight="bold"
               color="green"
             >
               Sản phẩm
             </Typography>
-            <Typography fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}>
+            <Typography fontSize={{ xs: "0.8rem", sm: "1rem", md: "1rem" }}>
               Trái cây chủ lực
             </Typography>
-            <Typography fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}>
+            <Typography fontSize={{ xs: "0.8rem", sm: "1rem", md: "1rem" }}>
               Đặt hàng
             </Typography>
           </Box>
@@ -266,22 +266,22 @@ export const Footer = () => {
             alignItems="flex-start"
             justifyContent="space-between"
             flexDirection="column"
-            gap={3}
+            gap={{ xs: 2, sm: 3, md: 3 }}
           >
             <Typography
-              fontSize={{ xs: "1.2rem", sm: "1.4rem", md: "1.4rem" }}
+              fontSize={{ xs: "1rem", sm: "1.4rem", md: "1.4rem" }}
               fontWeight="bold"
               color="green"
             >
               Quy trình
             </Typography>
-            <Typography fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}>
+            <Typography fontSize={{ xs: "0.8rem", sm: "1rem", md: "1rem" }}>
               Mô tả
             </Typography>
-            <Typography fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}>
+            <Typography fontSize={{ xs: "0.8rem", sm: "1rem", md: "1rem" }}>
               Truy xuất nguồn gốc
             </Typography>
-            <Typography fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}>
+            <Typography fontSize={{ xs: "0.8rem", sm: "1rem", md: "1rem" }}>
               Ứng dụng công nghệ
             </Typography>
           </Box>
@@ -298,19 +298,19 @@ export const Footer = () => {
             alignItems="flex-start"
             justifyContent="space-between"
             flexDirection="column"
-            gap={3}
+            gap={{ xs: 2, sm: 3, md: 3 }}
           >
             <Typography
-              fontSize={{ xs: "1.2rem", sm: "1.4rem", md: "1.4rem" }}
+              fontSize={{ xs: "1rem", sm: "1.4rem", md: "1.4rem" }}
               fontWeight="bold"
               color="green"
             >
               Đối tác & khách hàng
             </Typography>
-            <Typography fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}>
+            <Typography fontSize={{ xs: "0.8rem", sm: "1rem", md: "1rem" }}>
               Thông tin đối tác
             </Typography>
-            <Typography fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}>
+            <Typography fontSize={{ xs: "0.8rem", sm: "1rem", md: "1rem" }}>
               Đánh giá
             </Typography>
           </Box>
@@ -327,19 +327,19 @@ export const Footer = () => {
             alignItems="flex-start"
             justifyContent="space-between"
             flexDirection="column"
-            gap={3}
+            gap={{ xs: 2, sm: 3, md: 3 }}
           >
             <Typography
-              fontSize={{ xs: "1.2rem", sm: "1.4rem", md: "1.4rem" }}
+              fontSize={{ xs: "1rem", sm: "1.4rem", md: "1.4rem" }}
               fontWeight="bold"
               color="green"
             >
               Liên hệ
             </Typography>
-            <Typography fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}>
+            <Typography fontSize={{ xs: "0.8rem", sm: "1rem", md: "1rem" }}>
               Email: thanhthinh723317@gmail.com
             </Typography>
-            <Typography fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}>
+            <Typography fontSize={{ xs: "0.8rem", sm: "1rem", md: "1rem" }}>
               Sđt: +84 357523669
             </Typography>
           </Box>
@@ -368,12 +368,11 @@ export const Footer = () => {
         transition={{ duration: 1.2 }}
       >
         <Typography
-          fontSize={{ xs: "1rem", sm: "1.2rem", md: "1.2rem" }}
+          fontSize={{ xs: "0.8rem", sm: "1.2rem", md: "1.2rem" }}
           textAlign="center"
           mt={2}
           fontWeight="bold"
           color="green"
-          pb={3}
           component={motion.div} // Thêm animation trực tiếp
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}

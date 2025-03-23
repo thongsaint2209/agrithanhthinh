@@ -29,13 +29,13 @@ export const Navbar = () => {
 
   return (
     <Box
-      width="100%"
       height="100%"
+      width="100%"
       display="flex"
       alignItems="center"
       justifyContent="space-between"
       bgcolor="#218D56"
-      px={{ xs: 2, sm: 2, md: 4 }}
+      px={{ xs: 1, sm: 2, md: 4 }}
     >
       {/* Menu + Logo */}
       <Box
@@ -57,14 +57,14 @@ export const Navbar = () => {
         <Box onClick={() => navigate("/trang-chu")} sx={{ cursor: "pointer" }}>
           <Box display="flex" alignItems="center" gap={1}>
             <Box
-              width={{ xs: "35px", sm: "45px", md: "45px" }}
-              height={{ xs: "35px", sm: "45px", md: "45px" }}
+              width={{ xs: "32px", sm: "45px", md: "45px" }}
+              height={{ xs: "32px", sm: "45px", md: "45px" }}
               component="img"
               src={Logo}
               alt="Logo"
             />
             <Typography
-              fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}
+              fontSize={{ xs: "0.8rem", sm: "1rem", md: "1rem" }}
               color="#ffff"
             >
               Thuong Thinh Agri
@@ -187,7 +187,7 @@ export const Navbar = () => {
         >
           {/* Contact */}
           <Typography
-            fontSize={{ xs: "0.9rem", sm: "1rem", md: "1rem" }}
+            fontSize={{ xs: "0.8rem", sm: "1rem", md: "1rem" }}
             color="#ffff"
           >
             +84 357523669
@@ -203,8 +203,8 @@ export const Navbar = () => {
           >
             <PhoneRoundedIcon
               sx={{
-                width: { xs: "26px", sm: "26px", md: "26px" },
-                height: { xs: "26px", sm: "26px", md: "26px" },
+                width: { xs: "24px", sm: "26px", md: "26px" },
+                height: { xs: "24px", sm: "26px", md: "26px" },
                 color: "#11472B", // Màu của icon
               }}
             />

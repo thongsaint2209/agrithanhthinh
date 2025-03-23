@@ -30,7 +30,7 @@ export const Slider = () => {
   };
 
   return (
-    <Box display="flex" flexDirection="column">
+    <Box display="flex" flexDirection="column" width="100%">
       {/* Section 1*/}
       <Box
         width="100vw"

@@ -16,7 +16,7 @@ export const HomePage = () => {
   const navigate = useNavigate();
 
   return (
-    <Box display="flex" flexDirection="column">
+    <Box display="flex" flexDirection="column" width="100%">
       {/* Section 1 */}
       <Slider />
 
