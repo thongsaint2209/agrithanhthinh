@@ -140,8 +140,10 @@ export const ListProduct = () => {
                   scale: 1.05,
                   filter: "brightness(0.75)",
                 }} // Thay đổi thuộc tính khi hover
-                onHoverStart={() => setExpandedId(fruit.id)} // Thiết lập trạng thái khi bắt đầu hover
-                onHoverEnd={() => setExpandedId(null)} // Thiết lập trạng thái khi kết thúc hover
+                whileTap={{
+                  scale: 0.95,
+                  filter: "brightness(0.85)",
+                }} // Thiết lập trạng thái khi kết thúc hover
                 transition={{
                   duration: 0.4,
 

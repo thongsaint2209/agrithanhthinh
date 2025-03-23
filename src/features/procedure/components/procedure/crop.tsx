@@ -54,7 +54,7 @@ export const Crop = (pros: any) => {
               ease: [0.68, -0.4, 0.4, 1.6],
             }}
           >
-            Sản phẩm
+            Quy trình
           </Typography>
         </Box>
         {/* Section 2 */}
