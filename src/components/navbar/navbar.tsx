@@ -46,7 +46,13 @@ export const Navbar = () => {
       >
         {/* Nút mở sidebar chỉ hiển thị trên mobile */}
         <IconButton
-          sx={{ display: { xs: "auto", sm: "none" }, color: "#ffff" }}
+          sx={{
+            display: { xs: "auto", sm: "none" },
+            color: "#ffff",
+            "&:focus": {
+              outline: "none",
+            },
+          }}
           onClick={(e) => {
             e.stopPropagation(); // Ngăn chặn việc mở sidebar khi click vào icon
             setOpen(true);

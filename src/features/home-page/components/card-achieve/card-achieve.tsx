@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Typography } from "@mui/material";
 import { Button } from "@/components/elements/button/button";
 import { useNavigate } from "react-router-dom";
@@ -6,6 +5,7 @@ import { motion } from "framer-motion";
 import Harvesting_section2 from "@/assets/background/Harvesting_section2.png";
 import Orange_1 from "@/assets/background/Orange_1.png";
 import { useInView } from "react-intersection-observer"; //
+import React, { useState, useEffect } from "react";
 
 export const CardAchieve = (pros: any) => {
   const navigate = useNavigate();
@@ -19,6 +19,20 @@ export const CardAchieve = (pros: any) => {
     triggerOnce: true,
     threshold: getThreshold(),
   });
+
+  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 1000);
+  const [expandedId, setExpandedId] = useState<number | null>(null);
+  const isExpanded = expandedId === pros.id;
+
+  // Cập nhật isMobile khi resize màn hình
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 1000);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const motionState =
+    isMobile && isExpanded ? "tap" : inView ? "visible" : "initial";
 
   return (
     <Box ref={ref}>
@@ -34,20 +48,28 @@ export const CardAchieve = (pros: any) => {
         flexDirection="column"
         justifyContent="center"
         borderRadius={{ xs: 8, sm: 16, md: 16 }}
-        sx={{ overflow: "hidden" }}
+        sx={{ overflow: "hidden", cursor: "pointer", pointerEvents: "auto" }}
         component={motion.div} // Chỉ khai báo motion.div một lần duy nhất
-        variants={{
-          initial: { opacity: 0, scale: 0 }, // Animation ban đầu
-          visible: { opacity: 1, scale: 1 }, // Khi vào viewport
-          hover: { scale: 1 }, // Khi hover vào
-        }}
-        initial="initial"
-        animate={inView ? "visible" : "initial"}
-        whileHover="hover"
         transition={{
           duration: 1.1,
           delay: 0.5,
           ease: [0.68, -0.4, 0.4, 1.6],
+        }}
+        variants={{
+          initial: { opacity: 1, scale: 0 }, // Animation ban đầu
+          visible: { opacity: 1, scale: 1 }, // Khi vào viewport
+          hover: { scale: 1 }, // Hover trên PC
+          tap: { scale: 1 }, // Tap trên Mobile
+        }}
+        initial="initial"
+        whileTap={isMobile ? "tap" : undefined} // Tap chỉ cho Mobile
+        animate={motionState} // Sử dụng biến state thay vì whileTap
+        whileHover={!isMobile ? "hover" : undefined} // Hover chỉ cho PC
+        onClick={() => {
+          if (isMobile) {
+            console.log("Tapped!"); // Debug kiểm tra click
+            setExpandedId(isExpanded ? null : pros.id);
+          }
         }}
       >
         {/* Tiêu đề có animation */}
@@ -55,6 +77,7 @@ export const CardAchieve = (pros: any) => {
           variants={{
             initial: { opacity: 1, y: 100 }, // Ẩn ở dưới đáy
             hover: { opacity: 1, y: -20 }, // Khi hover, hiện lên từ từ
+            tap: { opacity: 1, y: -20 }, // Khi tap trên mobile
           }}
           transition={{
             duration: 1,
@@ -101,8 +124,8 @@ export const CardAchieve = (pros: any) => {
         <motion.div
           variants={{
             initial: { opacity: 0, y: 300 }, // Ẩn ở dưới đáy
-
             hover: { opacity: 1, y: 0 }, // Khi hover, hiện lên từ từ
+            tap: { opacity: 1, y: 0 }, // Khi hover, hiện lên từ từ
           }}
           transition={{
             duration: 1,

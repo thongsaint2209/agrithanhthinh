@@ -40,8 +40,6 @@ const fruits = [
 
 export const ListProduct = () => {
   const navigate = useNavigate();
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [expandedId, setExpandedId] = useState<number | null>(null);
 
   const getThreshold = () => {
     if (window.innerWidth < 600) return 0.1; // Mobile
@@ -62,6 +60,7 @@ export const ListProduct = () => {
   };
 
   const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 1000);
+  const [expandedId, setExpandedId] = useState<number | null>(null);
 
   return (
     <Box
@@ -145,8 +144,10 @@ export const ListProduct = () => {
                 whileHover={
                   !isMobile ? { scale: 1.05, filter: "brightness(0.75)" } : {}
                 }
-                whileTap={
-                  isMobile ? { scale: 1.05, filter: "brightness(0.75)" } : {}
+                animate={
+                  isMobile && isExpanded
+                    ? { scale: 1.05, filter: "brightness(0.75)" } // Khi tap mở trên Mobile
+                    : { scale: 1, filter: "brightness(1)" } // Khi đóng lại trên Mobile
                 }
                 onMouseEnter={() => !isMobile && setExpandedId(fruit.id)} // Hover mở trên PC
                 onMouseLeave={() => !isMobile && setExpandedId(null)} // Rời chuột đóng trên PC

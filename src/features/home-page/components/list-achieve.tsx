@@ -13,6 +13,7 @@ export const ListAchieve = () => {
   // Mảng dữ liệu cho các CardAchieve
   const achievements = [
     {
+      id: 1,
       title: "Chất lượng",
       color: "#11472B",
       icon: (
@@ -27,6 +28,7 @@ export const ListAchieve = () => {
         "Được trồng theo tiêu chuẩn nông nghiệp hữu cơ, không hóa chất độc hại, đảm bảo an toàn cho sức khỏe. Đạt độ chín hoàn hảo, mọng nước, ngọt thanh tự nhiên, mang lại trải nghiệm tươi ngon đúng chuẩn.",
     },
     {
+      id: 2,
       title: "Tầm nhìn",
       color: "#C85817",
       icon: (
@@ -41,6 +43,7 @@ export const ListAchieve = () => {
         "Được trồng theo tiêu chuẩn nông nghiệp hữu cơ, không hóa chất độc hại, đảm bảo an toàn cho sức khỏe. Đạt độ chín hoàn hảo, mọng nước, ngọt thanh tự nhiên, mang lại trải nghiệm tươi ngon đúng chuẩn.",
     },
     {
+      id: 3,
       title: "Tiêu chuẩn",
       color: "#AEAE24",
       icon: (
@@ -55,6 +58,7 @@ export const ListAchieve = () => {
         "Được trồng theo tiêu chuẩn nông nghiệp hữu cơ, không hóa chất độc hại, đảm bảo an toàn cho sức khỏe. Đạt độ chín hoàn hảo, mọng nước, ngọt thanh tự nhiên, mang lại trải nghiệm tươi ngon đúng chuẩn.",
     },
     {
+      id: 4,
       title: "Vận chuyển",
       color: "#726AE2",
       icon: (
@@ -69,6 +73,7 @@ export const ListAchieve = () => {
         "Được trồng theo tiêu chuẩn nông nghiệp hữu cơ, không hóa chất độc hại, đảm bảo an toàn cho sức khỏe. Đạt độ chín hoàn hảo, mọng nước, ngọt thanh tự nhiên, mang lại trải nghiệm tươi ngon đúng chuẩn.",
     },
     {
+      id: 5,
       title: "Công nghệ",
       color: "#F25858",
       icon: (
@@ -83,6 +88,7 @@ export const ListAchieve = () => {
         "Được trồng theo tiêu chuẩn nông nghiệp hữu cơ, không hóa chất độc hại, đảm bảo an toàn cho sức khỏe. Đạt độ chín hoàn hảo, mọng nước, ngọt thanh tự nhiên, mang lại trải nghiệm tươi ngon đúng chuẩn.",
     },
     {
+      id: 6,
       title: "Đối tác",
       color: "#5133B3",
       icon: (
