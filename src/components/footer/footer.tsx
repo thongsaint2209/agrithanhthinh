@@ -26,7 +26,7 @@ export const Footer = () => {
       flexDirection="column"
       bgcolor="#f6f9f3"
       py={{ xs: 4, sm: 4, md: 4 }}
-      px={{ xs: 2, sm: 6, md: 6 }}
+      px={{ xs: 2, sm: 6, md: 4 }}
       borderTop={1}
       borderColor="black"
       gap={{ xs: 3, sm: 4, md: 4 }}
