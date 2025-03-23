@@ -61,6 +61,8 @@ export const ListProduct = () => {
     window.scrollTo(0, 0); // Reset về đầu trang
   };
 
+  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 1000);
+
   return (
     <Box
       ref={ref}
@@ -136,19 +138,21 @@ export const ListProduct = () => {
                   width: "100%",
                 }}
                 component={motion.div}
-                whileHover={{
-                  scale: 1.05,
-                  filter: "brightness(0.75)",
-                }} // Thay đổi thuộc tính khi hover
-                whileTap={{
-                  scale: 0.95,
-                  filter: "brightness(0.85)",
-                }} // Thiết lập trạng thái khi kết thúc hover
                 transition={{
                   duration: 0.4,
-
                   ease: [0.68, -0.4, 0.4, 1.6],
                 }}
+                whileHover={
+                  !isMobile ? { scale: 1.05, filter: "brightness(0.75)" } : {}
+                }
+                whileTap={
+                  isMobile ? { scale: 1.05, filter: "brightness(0.75)" } : {}
+                }
+                onMouseEnter={() => !isMobile && setExpandedId(fruit.id)} // Hover mở trên PC
+                onMouseLeave={() => !isMobile && setExpandedId(null)} // Rời chuột đóng trên PC
+                onClick={() =>
+                  isMobile && setExpandedId(isExpanded ? null : fruit.id)
+                } // Tap mở trên Mobile
               >
                 {/* Ảnh nền */}
                 <Box
